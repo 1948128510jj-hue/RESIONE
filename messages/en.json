@@ -33,7 +33,33 @@
     "ctaTitle": "Ready to Get Started?",
     "ctaSub": "Tell us your requirements — we will get back with a quote within 24 hours.",
     "sendInquiry": "Send Inquiry Now →",
-    "respondTime": "Typically respond within 2 hours during business hours"
+    "respondTime": "Typically respond within 2 hours during business hours",
+    "whyItems": {
+      "rd": {
+        "title": "Professional R&D Team",
+        "desc": "Established in 2016, focusing on R&D of photocuring 3D printing materials for practical real-world applications."
+      },
+      "qc": {
+        "title": "Strict Quality Control",
+        "desc": "All data measured with ASTM standards in controlled environment. Every batch tested for consistency."
+      },
+      "shipping": {
+        "title": "Global Shipping",
+        "desc": "Reliable logistics network covering international markets. Fast and secure delivery worldwide."
+      },
+      "oem": {
+        "title": "OEM & ODM Services",
+        "desc": "Custom formulation, private labeling, and packaging tailored to your brand requirements."
+      },
+      "productLine": {
+        "title": "Comprehensive Product Line",
+        "desc": "From standard to high-temp, flexible to dental — 30+ resin formulations for every application."
+      },
+      "appFocused": {
+        "title": "Application-Focused",
+        "desc": "Our mission: To make 3D printing more practical. Every resin developed with real end-use in mind."
+      }
+    }
   },
   "products": {
     "title": "Our Products",
@@ -141,7 +167,25 @@
     },
     "ctaTitle": "Ready to Build Your Resin Brand?",
     "ctaSub": "Let us discuss your OEM/ODM requirements.",
-    "ctaButton": "Start Your OEM Project"
+    "ctaButton": "Start Your OEM Project",
+    "oemItems": {
+      "formulation": {
+        "title": "Custom Formulation",
+        "desc": "Resins tailored to your requirements — color, viscosity, mechanical properties, and more."
+      },
+      "labeling": {
+        "title": "Private Labeling",
+        "desc": "Your brand, our quality. Full white-label solutions with custom bottles, labels, and packaging."
+      },
+      "packaging": {
+        "title": "Packaging Customization",
+        "desc": "Flexible options from 500ml bottles to 25kg drums, with your branding throughout."
+      },
+      "techDoc": {
+        "title": "Technical Documentation",
+        "desc": "Complete SDS, TDS, and print parameter guides in your language for your customers."
+      }
+    }
   },
   "about": {
     "title": "About Us",

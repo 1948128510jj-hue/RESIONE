@@ -77,6 +77,9 @@ export function ProductCategoriesSection() {
   );
 }
 
+const WHY_KEYS = ['rd','qc','shipping','oem','productLine','appFocused'];
+const WHY_ICONS: Record<string,string> = {rd:'🔬',qc:'✅',shipping:'🚢',oem:'🏭',productLine:'📚',appFocused:'🎯'};
+
 export function WhyChooseUsSection() {
   const t = useTranslations("home");
   return (
@@ -87,11 +90,11 @@ export function WhyChooseUsSection() {
           <p className="text-muted max-w-xl mx-auto">{t("whyUsSub")}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {WHY_CHOOSE_US.map((item) => (
-            <div key={item.title} className="bg-white p-6 rounded-xl border border-border hover:shadow-md transition-shadow">
-              <div className="text-3xl mb-3">{item.icon}</div>
-              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-              <p className="text-sm text-muted leading-relaxed">{item.description}</p>
+          {WHY_KEYS.map((k) => (
+            <div key={k} className="bg-white p-6 rounded-xl border border-border hover:shadow-md transition-shadow">
+              <div className="text-3xl mb-3">{WHY_ICONS[k]}</div>
+              <h3 className="font-semibold text-foreground mb-2">{t(`whyItems.${k}.title`)}</h3>
+              <p className="text-sm text-muted leading-relaxed">{t(`whyItems.${k}.desc`)}</p>
             </div>
           ))}
         </div>
@@ -99,6 +102,9 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
+
+const OEM_KEYS = ['formulation','labeling','packaging','techDoc'];
+const OEM_ICONS: Record<string,string> = {formulation:'🧪',labeling:'🏷️',packaging:'📦',techDoc:'📋'};
 
 export function OEMServicesSection() {
   const t = useTranslations("home");
@@ -110,11 +116,11 @@ export function OEMServicesSection() {
           <p className="text-muted max-w-xl mx-auto">{t("oemSub")}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {OEM_SERVICES.map((item) => (
-            <div key={item.title} className="p-6 bg-surface rounded-xl text-center border border-border hover:border-primary/30 transition-colors">
-              <div className="text-4xl mb-4">{item.icon}</div>
-              <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-              <p className="text-sm text-muted leading-relaxed">{item.description}</p>
+          {OEM_KEYS.map((k) => (
+            <div key={k} className="p-6 bg-surface rounded-xl text-center border border-border hover:border-primary/30 transition-colors">
+              <div className="text-4xl mb-4">{OEM_ICONS[k]}</div>
+              <h3 className="font-semibold text-foreground mb-2">{t(`whyItems.${k}.title`)}</h3>
+              <p className="text-sm text-muted leading-relaxed">{t(`whyItems.${k}.desc`)}</p>
             </div>
           ))}
         </div>
