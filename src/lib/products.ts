@@ -18,8 +18,8 @@ export interface Product {
   slug: string;
   name: string;
   tagline: string;
-  category: 'standard' | 'tough' | 'flexible' | 'high-temp' |
-    'dental' | 'casting' | 'water-washable' | 'specialty' | 'anti-impact' | 'transparent';
+  category: 'Standard' | 'Tough / ABS-Like' | 'Flexible / Elastic' | 'High Temperature' |
+    'Dental' | 'Water Washable' | 'Anti-Impact / Nylon-Like' | 'Specialty';
   description: string;
   images: string[];
   specifications: ProductSpecifications;
@@ -42,10 +42,11 @@ export interface ProductCategory {
 }
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
-  { key: 'standard', name: 'Standard', description: 'High-precision standard resins for general-purpose printing', icon: '🔧' },
-  { key: 'tough', name: 'Tough / ABS-Like', description: 'Engineering-grade tough resins with excellent impact resistance', icon: '🛡️' },
-  { key: 'flexible', name: 'Flexible / Elastic', description: 'Rubber-like flexible and elastic resins for soft-touch applications', icon: '🔗' },
-  { key: 'high-temp', name: 'High Temperature', description: 'Heat-resistant resins for demanding thermal environments', icon: '🔥' },
-  { key: 'dental', name: 'Dental', description: 'Dental model, gingiva, and castable resins for dental professionals', icon: '🦷' },
-  { key: 'water-washable', name: 'Water Washable', description: 'Easy-to-clean resins — rinse with water, no IPA required', icon: '💧' },
+  { key: 'Anti-Impact / Nylon-Like', name: 'Anti-Impact / Nylon-Like', description: 'Industry-leading impact resistance — nylon-like durability, outdoor-ready, long-term non-brittle', icon: '🟢' },
+  { key: 'Tough / ABS-Like', name: 'Tough / ABS-Like', description: 'Engineering-grade tough resins with excellent impact resistance, drillable & machinable', icon: '🛡️' },
+  { key: 'Flexible / Elastic', name: 'Flexible / Elastic', description: 'Rubber-like flexible and end-use elastomer resins — from 50A ultra-soft to 80A industrial elastic', icon: '🔗' },
+  { key: 'Standard', name: 'Standard', description: 'High-precision standard & specialty resins for general-purpose and professional printing', icon: '🔧' },
+  { key: 'High Temperature', name: 'High Temperature', description: 'Heat-resistant resins for demanding thermal environments up to 140°C', icon: '🔥' },
+  { key: 'Dental', name: 'Dental', description: 'Dental model, gingiva, and castable resins for dental professionals', icon: '🦷' },
+  { key: 'Water Washable', name: 'Water Washable', description: 'Easy-to-clean resins — rinse with water, no IPA required', icon: '💧' },
 ];
