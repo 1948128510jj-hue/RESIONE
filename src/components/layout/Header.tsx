@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 bg-space/85 backdrop-blur-lg border-b border-border/30">
       <div className="container-wide flex items-center justify-between h-16 sm:h-[68px]">
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center shrink-0 gap-3">
@@ -32,7 +32,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-0.5">
           {SITE_CONFIG.nav.map((item) => (
             <Link key={item.href} href={`/${locale}${item.href}`}
-              className="px-3.5 py-2 text-sm font-medium text-muted hover:text-brand hover:bg-gray-50 rounded-md transition-all duration-200">
+              className="px-3.5 py-2 text-sm font-medium text-muted hover:text-white hover:bg-space-hover rounded-md transition-all duration-200">
               {t(item.href === '/' ? 'home' : item.href.replace('/', ''))}
             </Link>
           ))}
@@ -82,7 +82,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden border-t border-border/50 bg-bg">
+        <div className="lg:hidden border-t border-border/30 bg-space">
           <nav className="container-wide py-4 flex flex-col gap-1">
             {SITE_CONFIG.nav.map((item) => (
               <Link key={item.href} href={`/${locale}${item.href}`} onClick={() => setMenuOpen(false)}

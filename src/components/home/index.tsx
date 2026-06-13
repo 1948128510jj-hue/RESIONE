@@ -13,29 +13,27 @@ export function HeroBanner() {
   const t = useTranslations("home");
   const locale = useLocale();
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-white">
-      {/* Subtle tech pattern */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: 'radial-gradient(circle at 25% 25%, #00c6c0 1px, transparent 1px), radial-gradient(circle at 75% 75%, #3b82f6 1px, transparent 1px)',
-        backgroundSize: '60px 60px',
-      }} />
-      {/* Light glow accents */}
-      <div className="absolute top-20 -left-20 w-72 h-72 bg-accent/5 rounded-full blur-[100px]" />
-      <div className="absolute bottom-10 right-0 w-64 h-64 bg-accent-blue/5 rounded-full blur-[80px]" />
-      {/* Top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/0 via-accent/40 to-accent/0" />
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+      {/* Rainbow glow orbs */}
+      <div className="absolute top-10 -left-20 w-80 h-80 bg-[#ff6b6b]/8 rounded-full blur-[120px]" />
+      <div className="absolute top-1/3 right-0 w-64 h-64 bg-[#48dbfb]/8 rounded-full blur-[100px]" />
+      <div className="absolute bottom-10 left-1/4 w-72 h-72 bg-[#ff9ff3]/8 rounded-full blur-[110px]" />
+      <div className="absolute bottom-0 right-0 w-56 h-56 bg-[#feca57]/8 rounded-full blur-[90px]" />
 
       <div className="container-wide relative z-10 py-16 sm:py-24">
+        {/* Rainbow accent bar */}
+        <div className="rainbow-line w-24 mb-10" />
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* LEFT: Text */}
           <div>
             <div className="tag mb-6">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               {t("badge")}
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-brand">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-white">
               {t("title")}{" "}
-              <span className="text-accent">{t("titleHighlight")}</span>
+              <span className="text-gradient">{t("titleHighlight")}</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted max-w-xl mb-10 leading-relaxed">
               {t("subtitle")}
@@ -80,7 +78,7 @@ export function ProductCategoriesSection() {
   const tc = useTranslations("categories");
   const locale = useLocale();
   return (
-    <section className="py-20 bg-[#f8fafb]">
+    <section className="py-20 bg-space-light">
       <div className="container-wide">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("productsTitle")}</h2>
@@ -113,7 +111,7 @@ const WHY_ICONS: Record<string,string> = {rd:'🔬',qc:'✅',shipping:'🚢',oem
 export function WhyChooseUsSection() {
   const t = useTranslations("home");
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-space-light">
       <div className="container-wide">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("whyUsTitle")}</h2>
@@ -142,7 +140,7 @@ const OEM_ICONS: Record<string,string> = {formulation:'🧪',labeling:'🏷️',
 export function OEMServicesSection() {
   const t = useTranslations("home");
   return (
-    <section className="py-20 bg-[#f8fafb]">
+    <section className="py-20 bg-space-light">
       <div className="container-wide">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{t("oemTitle")}</h2>
@@ -169,7 +167,8 @@ export function CTASection() {
   const t = useTranslations("home");
   const locale = useLocale();
   return (
-    <section className="py-20 bg-brand text-white text-center">
+    <section className="py-20 bg-space-light text-white text-center relative overflow-hidden">
+      <div className="absolute inset-0 rainbow-line opacity-20" style={{height:'100%',background:'linear-gradient(180deg,transparent,rgba(0,198,192,0.08),transparent)'}} />
       <div className="container-wide">
         <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t("ctaTitle")}</h2>
         <p className="text-white/70 max-w-lg mx-auto mb-10 text-lg">{t("ctaSub")}</p>
@@ -179,7 +178,7 @@ export function CTASection() {
             WhatsApp Chat
           </a>
         </div>
-        <p className="text-white/40 text-sm mt-8">{t("respondTime")}</p>
+        <p className="text-muted text-sm mt-8">{t("respondTime")}</p>
       </div>
     </section>
   );
