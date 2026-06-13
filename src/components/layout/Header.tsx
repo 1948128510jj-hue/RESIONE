@@ -7,7 +7,6 @@ import { useLocale } from "next-intl";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const LANG_LABELS: Record<string, string> = { en: "EN", zh: "中文", ja: "日本語" };
-const LANG_NEXT: Record<string, string> = { en: "zh", zh: "ja", ja: "en" };
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,9 +14,10 @@ export default function Header() {
   const locale = useLocale();
   const pathname = usePathname();
 
-  // Build switch URL: replace locale segment
+  // Build switch URL: pathname in next-intl is WITHOUT locale prefix
   function switchHref(target: string) {
-    return pathname.replace(/^\/(en|zh|ja)/, `/${target}`);
+    const cleanPath = pathname === '/' ? '' : pathname;
+    return `/${target}${cleanPath}`;
   }
 
   return (
