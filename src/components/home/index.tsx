@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
+import ProductBurst from "./ProductBurst";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 
 /* ================================================================
@@ -25,37 +26,44 @@ export function HeroBanner() {
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/0 via-accent/40 to-accent/0" />
 
       <div className="container-wide relative z-10 py-16 sm:py-24">
-        <div className="max-w-3xl">
-          <div className="tag mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {t("badge")}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* LEFT: Text */}
+          <div>
+            <div className="tag mb-6">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              {t("badge")}
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-brand">
+              {t("title")}{" "}
+              <span className="text-accent">{t("titleHighlight")}</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-muted max-w-xl mb-10 leading-relaxed">
+              {t("subtitle")}
+            </p>
+            <div className="flex flex-wrap gap-4 mb-12">
+              <Link href={`/${locale}/products`} className="btn-primary text-base px-8 py-4">
+                {t("exploreProducts")}
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+              <Link href={`/${locale}/inquiry`} className="btn-outline text-base px-8 py-4">
+                {t("requestQuote")}
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-6 text-sm text-muted-dim">
+              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustISO")}</span>
+              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustCountries")}</span>
+              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustRD")}</span>
+              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustOEM")}</span>
+            </div>
           </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6 text-brand">
-            {t("title")}{" "}
-            <span className="text-accent">{t("titleHighlight")}</span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-muted max-w-xl mb-10 leading-relaxed">
-            {t("subtitle")}
-          </p>
-
-          <div className="flex flex-wrap gap-4 mb-12">
-            <Link href={`/${locale}/products`} className="btn-primary text-base px-8 py-4">
-              {t("exploreProducts")}
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </Link>
-            <Link href={`/${locale}/inquiry`} className="btn-outline text-base px-8 py-4">
-              {t("requestQuote")}
-            </Link>
+          {/* RIGHT: Animation */}
+          <div className="hidden lg:flex items-center justify-center">
+            <ProductBurst />
           </div>
-
-          <div className="flex flex-wrap gap-6 text-sm text-muted-dim">
-            <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustISO")}</span>
-            <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustCountries")}</span>
-            <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustRD")}</span>
-            <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustOEM")}</span>
-          </div>
+        </div>
+        {/* Mobile: show animation below text */}
+        <div className="lg:hidden mt-8">
+          <ProductBurst />
         </div>
       </div>
     </section>
