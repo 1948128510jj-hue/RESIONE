@@ -23,9 +23,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           <div>
             <h2 className="text-2xl font-bold mb-4">{t("whoWeAre")}</h2>
             <div className="space-y-4 text-muted leading-relaxed">
-              <p>{SITE_CONFIG.fullName} is a professional manufacturer specializing in the research, development, and production of LCD/DLP UV-curing photopolymer resins. Headquartered in Dongguan, China, we serve 3D printing professionals, businesses, and distributors across 50+ countries.</p>
-              <p>Our in-house R&D team continuously develops new formulations to meet evolving market demands. From standard prototyping resins to specialized dental, casting, and engineering-grade materials, every product undergoes rigorous quality testing before reaching our customers.</p>
-              <p>We believe in building long-term partnerships. Whether you are a distributor looking to expand your product line or a business seeking custom resin solutions, we are your reliable partner in 3D printing materials.</p>
+              <p>{t("p1")}</p>
+              <p>{t("p2")}</p>
+              <p>{t("p3")}</p>
             </div>
           </div>
           <div className="aspect-video bg-gradient-to-br from-surface to-gray-200 rounded-2xl flex items-center justify-center">
