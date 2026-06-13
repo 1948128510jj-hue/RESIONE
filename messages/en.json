@@ -113,7 +113,32 @@
     "title": "OEM & ODM Services",
     "subtitle": "Build your own resin brand with our end-to-end custom manufacturing",
     "processTitle": "How Our OEM Process Works",
-    "cta": "Ready to Build Your Resin Brand?"
+    "cta": "Ready to Build Your Resin Brand?",
+    "heroTitle": "OEM & ODM Services",
+    "heroSub": "Build your own 3D printing resin brand with our end-to-end custom manufacturing services. From formulation to packaging — we handle everything.",
+    "step1": {
+      "title": "Discuss Needs",
+      "desc": "Tell us your requirements — resin type, properties, color, target price"
+    },
+    "step2": {
+      "title": "Sample Development",
+      "desc": "Our R&D develops sample formulations for your testing and approval"
+    },
+    "step3": {
+      "title": "Design & Branding",
+      "desc": "Custom labels, bottles, packaging designed with your brand"
+    },
+    "step4": {
+      "title": "Production",
+      "desc": "ISO-certified manufacturing with strict quality control at every batch"
+    },
+    "step5": {
+      "title": "Ship & Support",
+      "desc": "Global logistics + technical documentation support for your customers"
+    },
+    "ctaTitle": "Ready to Build Your Resin Brand?",
+    "ctaSub": "Let us discuss your OEM/ODM requirements.",
+    "ctaButton": "Start Your OEM Project"
   },
   "about": {
     "title": "About Us",
