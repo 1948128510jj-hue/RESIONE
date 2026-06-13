@@ -98,7 +98,7 @@ export default function BlogPage() {
         <div className="mt-16 p-8 bg-gradient-to-r from-primary to-primary-light text-white rounded-2xl text-center">
           <h3 className="text-xl font-bold mb-2">Stay Updated on 3D Printing Resin Tech</h3>
           <p className="text-white/80 mb-6 max-w-lg mx-auto">Get the latest articles, product updates, and industry insights delivered to your inbox.</p>
-          <form action="https://formsubmit.co/sales@godsaid3d.com" method="POST" className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form action="https://formsubmit.co/1948128510jj@gmail.com" method="POST" className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input type="hidden" name="_subject" value="Blog Newsletter Subscription" />
             <input type="email" name="email" required placeholder="Your email address" className="flex-1 px-4 py-3 rounded-lg text-foreground text-sm border-0 focus:ring-2 focus:ring-white/30" />
             <button type="submit" className="px-6 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">Subscribe</button>

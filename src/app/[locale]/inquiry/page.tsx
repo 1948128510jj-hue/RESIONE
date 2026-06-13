@@ -21,7 +21,7 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
       <div className="container-wide py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           <div className="lg:col-span-2">
-            <form action="https://formsubmit.co/sales@godsaid3d.com" method="POST" className="space-y-6">
+            <form action="https://formsubmit.co/1948128510jj@gmail.com" method="POST" className="space-y-6">
               <input type="hidden" name="_subject" value="New RFQ from RESIONE Website" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://resione.top/thank-you" />

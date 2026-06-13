@@ -4,7 +4,7 @@ export const SITE_CONFIG = {
   tagline: 'RESIONE Makes 3D Printing More Practical',
   description: 'Premium 3D printing photopolymer resins for LCD/DLP/SLA printers. RESIONE brand by Dongguan Godsaid Technology Co., Ltd. OEM & ODM services available.',
   url: 'https://www.resione.com',
-  email: 'sales@godsaid3d.com',
+  email: '1948128510jj@gmail.com',
   phone: '+86 18027908296',
   whatsapp: '+86 18027908296',
   wechat: '18027908296',
