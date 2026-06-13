@@ -1,14 +1,12 @@
-import { OEM_SERVICES } from "@/lib/constants";
+import { OEM_SERVICES, SITE_CONFIG } from "@/lib/constants";
 import Link from "next/link";
-import { SITE_CONFIG } from "@/lib/constants";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "OEM & ODM Services",
-  description: "Custom resin formulation, private labeling, and packaging solutions. Build your own 3D printing resin brand.",
-};
+export const metadata: Metadata = { title: "OEM & ODM Services", description: "Custom resin formulation, private labeling, and packaging solutions." };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const t = await getTranslations("services");
   return (
     <div className="bg-white">
       <section className="bg-surface border-b border-border">

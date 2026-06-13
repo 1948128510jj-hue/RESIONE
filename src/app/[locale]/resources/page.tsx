@@ -1,12 +1,11 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Resources",
-  description: "Technical resources, SDS/TDS downloads, print parameter guides, and 3D printing industry insights.",
-};
+export const metadata: Metadata = { title: "Resources", description: "Technical resources, SDS/TDS downloads, print parameter guides." };
 
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  const t = await getTranslations("resources");
   return (
     <div className="bg-white">
       <section className="bg-surface border-b border-border">
