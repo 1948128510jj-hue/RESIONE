@@ -1,9 +1,11 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function FloatingInquiry() {
+  const locale = useLocale();
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
       {/* WhatsApp floating button */}
@@ -18,7 +20,7 @@ export default function FloatingInquiry() {
       </a>
       {/* RFQ / Inquiry floating button */}
       <Link
-        href="/inquiry"
+        href={`/${locale}/inquiry`}
         className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-primary-light hover:scale-110 transition-all group"
         title="Request a Quote"
       >
