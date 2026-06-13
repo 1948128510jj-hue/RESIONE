@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const LANG_LABELS: Record<string, string> = { en: "EN", zh: "中文", ja: "日本語" };
@@ -11,6 +11,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const locale = useLocale();
+  const t = useTranslations("nav");
 
   const switchLang = useCallback((target: string) => {
     const segs = window.location.pathname.split('/').filter(Boolean);
@@ -38,7 +39,7 @@ export default function Header() {
               href={`/${locale}${item.href}`}
               className="px-3 py-2 text-sm font-medium text-foreground/70 hover:text-primary hover:bg-surface rounded-md transition-colors"
             >
-              {item.label}
+              {t(item.href === '/' ? 'home' : item.href.replace('/', ''))}
             </Link>
           ))}
         </nav>
@@ -110,7 +111,7 @@ export default function Header() {
           <nav className="container-wide py-4 flex flex-col gap-1">
             {SITE_CONFIG.nav.map((item) => (
               <Link key={item.href} href={`/${locale}${item.href}`} onClick={() => setMenuOpen(false)} className="px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-surface rounded-lg transition-colors">
-                {item.label}
+                {t(item.href === '/' ? 'home' : item.href.replace('/', ''))}
               </Link>
             ))}
             {/* Mobile language switcher */}
