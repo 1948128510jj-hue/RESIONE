@@ -2,7 +2,6 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
-import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -12,16 +11,17 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
 
   const switchLang = useCallback((target: string) => {
-    setLangOpen(false);
-    setMenuOpen(false);
-    // pathname includes locale, e.g. /en/products → replace with /zh/products
-    const newPath = pathname.replace(/^\/(en|zh|ja)(\/|$)/, `/${target}$2`);
-    router.push(newPath);
-  }, [pathname, router]);
+    // Use browser-native URL to reliably switch language
+    // window.location.pathname = /en/products or /zh or /
+    const raw = window.location.pathname;
+    // Replace leading locale segment or prepend if absent
+    const newPath = raw.match(/^\/(en|zh|ja)(\/|$)/)
+      ? raw.replace(/^\/(en|zh|ja)(\/|$)/, `/${target}$2`)
+      : `/${target}${raw === '/' ? '' : raw}`;
+    window.location.href = newPath + window.location.search + window.location.hash;
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
