@@ -107,7 +107,10 @@
     "results": "Recommended Resins",
     "restart": "Start Over",
     "browseAll": "Browse All Products",
-    "customHelp": "Request Custom Help"
+    "customHelp": "Request Custom Help",
+    "q1_text": "What are you printing?",
+    "q2_text": "What property matters most?",
+    "q3_text": "Any special requirements?"
   },
   "services": {
     "title": "OEM & ODM Services",
@@ -155,7 +158,63 @@
     "subtitle": "Technical documentation, FAQs, and industry insights",
     "techDocs": "Technical Documents",
     "faq": "Frequently Asked Questions",
-    "insights": "Industry Insights"
+    "insights": "Industry Insights",
+    "docsTitle": "📄 Technical Documents",
+    "doc1": {
+      "name": "SDS — Standard Resin",
+      "desc": "Safety Data Sheet"
+    },
+    "doc2": {
+      "name": "SDS — Tough Resin",
+      "desc": "Safety Data Sheet"
+    },
+    "doc3": {
+      "name": "TDS — Full Product Line",
+      "desc": "Technical Data Sheet"
+    },
+    "doc4": {
+      "name": "Print Parameter Guide",
+      "desc": "For LCD/DLP printers"
+    },
+    "download": "Download",
+    "faqTitle": "❓ FAQ",
+    "faq1": {
+      "q": "What wavelength do your resins cure at?",
+      "a": "385-405nm, compatible with most consumer and professional LCD/DLP 3D printers."
+    },
+    "faq2": {
+      "q": "Do you offer sample orders?",
+      "a": "Yes! Sample kits (1-2 kg) available for testing before bulk orders."
+    },
+    "faq3": {
+      "q": "What is the shelf life?",
+      "a": "12 months stored in cool dark place (15-30°C). Keep sealed, away from UV light."
+    },
+    "faq4": {
+      "q": "Can you match a competitor resin?",
+      "a": "Yes, our R&D team can analyze and formulate matching or exceeding competitor specs."
+    },
+    "faq5": {
+      "q": "Do you offer private labeling?",
+      "a": "Yes. Full OEM/ODM: custom bottles, labels, packaging."
+    },
+    "blogTitle": "📝 Industry Insights",
+    "readMore": "Read more →",
+    "post1": {
+      "date": "2026-05",
+      "title": "How to Choose the Right 3D Printing Resin",
+      "excerpt": "A comprehensive guide to understanding resin properties and matching them to your application."
+    },
+    "post2": {
+      "date": "2026-05",
+      "title": "LCD vs DLP vs SLA: Resin Compatibility",
+      "excerpt": "Understanding light source differences and effects on curing and print quality."
+    },
+    "post3": {
+      "date": "2026-04",
+      "title": "Post-Processing Best Practices",
+      "excerpt": "Optimal washing, curing, and finishing techniques for professional resin prints."
+    }
   },
   "contact": {
     "title": "Contact Us",
@@ -188,7 +247,8 @@
     "step2": "We send a detailed quote within 24 hours",
     "step3": "We discuss customization options if needed",
     "step4": "Sample production (if required)",
-    "step5": "Bulk order and delivery"
+    "step5": "Bulk order and delivery",
+    "heroSub": "Fill out the form below and we will get back to you within 24 hours with pricing, samples, and technical recommendations."
   },
   "footer": {
     "companyDesc": "Professional manufacturer of LCD UV-curing 3D printing resins. Serving customers in 50+ countries worldwide.",
