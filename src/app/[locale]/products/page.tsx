@@ -8,8 +8,11 @@ import { ProductCard } from "@/components/products";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 import { ALL_PRODUCTS } from "@/lib/products-data";
 
+const CAT_KEY_MAP: Record<string, string> = {'Anti-Impact / Nylon-Like':'antiimpact','Tough / ABS-Like':'tough','Flexible / Elastic':'flexible','Standard':'standard','High Temperature':'hightemp','Dental':'dental','Water Washable':'waterwash'};
+
 function ProductGrid() {
   const t = useTranslations("products");
+  const tc = useTranslations("categories");
   const locale = useLocale();
   const searchParams = useSearchParams();
   const categoryKey = searchParams.get("category");
@@ -38,7 +41,7 @@ function ProductGrid() {
               const active = categoryKey === cat.key;
               return (
                 <Link key={cat.key} href={`/${locale}/products?category=${encodeURIComponent(cat.key)}`} className={`px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors ${active ? "bg-primary text-white" : "border border-border hover:border-primary hover:text-primary"}`}>
-                  {cat.name}
+                  {tc(`${CAT_KEY_MAP[cat.key] || 'standard'}.name`)}
                 </Link>
               );
             })}

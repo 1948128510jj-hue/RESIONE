@@ -4,10 +4,19 @@ import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
+const FT_CAT: Record<string, string> = {
+  'Anti-Impact / Nylon-Like': 'antiimpact', 'Tough / ABS-Like': 'tough',
+  'Flexible / Elastic': 'flexible', 'Water Washable': 'waterwash',
+  'Dental': 'dental', 'High Temperature': 'hightemp',
+};
+
 export default function Footer() {
   const locale = useLocale();
   const t = useTranslations("footer");
   const tn = useTranslations("nav");
+  const tc = useTranslations("categories");
+
+  const catNames = ['Anti-Impact / Nylon-Like', 'Tough / ABS-Like', 'Flexible / Elastic', 'Water Washable', 'Dental', 'High Temperature'];
 
   return (
     <footer className="bg-primary-dark text-white">
@@ -40,12 +49,12 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-3">{t("products")}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href={`/${locale}/products?category=Anti-Impact%20%2F%20Nylon-Like`} className="hover:text-white transition-colors">Anti-Impact / Nylon-Like</Link></li>
-              <li><Link href={`/${locale}/products?category=Tough%20%2F%20ABS-Like`} className="hover:text-white transition-colors">Tough / ABS-Like</Link></li>
-              <li><Link href={`/${locale}/products?category=Flexible%20%2F%20Elastic`} className="hover:text-white transition-colors">Flexible / Elastic</Link></li>
-              <li><Link href={`/${locale}/products?category=Water%20Washable`} className="hover:text-white transition-colors">Water Washable</Link></li>
-              <li><Link href={`/${locale}/products?category=Dental`} className="hover:text-white transition-colors">Dental</Link></li>
-              <li><Link href={`/${locale}/products?category=High%20Temperature`} className="hover:text-white transition-colors">High Temperature</Link></li>
+              {catNames.map((cn) => {
+                const ck = FT_CAT[cn] || 'standard';
+                return (
+                  <li key={cn}><Link href={`/${locale}/products?category=${encodeURIComponent(cn)}`} className="hover:text-white transition-colors">{tc(`${ck}.name`)}</Link></li>
+                );
+              })}
               <li><Link href={`/${locale}/products`} className="hover:text-white transition-colors font-semibold">{t("allProducts")}</Link></li>
             </ul>
           </div>
