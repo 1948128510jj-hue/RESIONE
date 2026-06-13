@@ -126,12 +126,34 @@
     "title": "お問い合わせ",
     "subtitle": "レジンのお問い合わせ、OEMサービス、技術サポートについて",
     "formTitle": "メッセージを送る",
-    "send": "送信"
+    "name": "お名前",
+    "email": "メールアドレス",
+    "subject": "件名",
+    "message": "メッセージ",
+    "send": "送信",
+    "info": "連絡先情報",
+    "whatsapp": "WhatsApp",
+    "wechat": "WeChat",
+    "address": "住所"
   },
   "inquiry": {
     "title": "見積もり依頼",
     "subtitle": "レジンのご要望をお送りください。24時間以内に見積もりをご返信します。",
-    "submit": "見積もりを送信"
+    "name": "お名前 *",
+    "company": "会社名 *",
+    "email": "メールアドレス *",
+    "phone": "電話番号 / WhatsApp",
+    "resinType": "ご希望のレジンタイプ",
+    "quantity": "推定月間数量",
+    "priceRange": "目標価格帯",
+    "requirements": "その他ご要望・メッセージ",
+    "submit": "見積もりを送信",
+    "whatsNext": "次のステップ",
+    "step1": "ご要望を確認します",
+    "step2": "24時間以内に見積もりをお送りします",
+    "step3": "必要に応じてカスタマイズオプションをご提案します",
+    "step4": "サンプル製作（必要な場合）",
+    "step5": "量産・出荷"
   },
   "footer": {
     "companyDesc": "プロ仕様LCD UV硬化3Dプリントレジンのメーカー。世界50カ国以上のお客様にサービスを提供しています。",

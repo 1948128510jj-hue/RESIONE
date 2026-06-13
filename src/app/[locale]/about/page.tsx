@@ -1,12 +1,14 @@
 import { SITE_CONFIG, WHY_CHOOSE_US } from "@/lib/constants";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: "About Us", description: "Learn about ShenShuo Tech — a professional LCD UV-curing resin manufacturer." };
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("about");
   return (
     <div className="bg-white">
