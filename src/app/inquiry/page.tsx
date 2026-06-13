@@ -23,10 +23,14 @@ export default function InquiryPage() {
           {/* Form */}
           <div className="lg:col-span-2">
             <form
-              action="https://formspree.io/f/your-form-id"
+              action="https://formsubmit.co/sales@godsaid3d.com"
               method="POST"
               className="space-y-6"
             >
+              <input type="hidden" name="_subject" value="New RFQ from RESIONE Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://resione.top/thank-you" />
+              <input type="text" name="_honey" style={{display:'none'}} />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-1.5">Full Name *</label>

@@ -1,7 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
       <div className="container-wide flex items-center justify-between h-16 sm:h-[72px]">
@@ -42,14 +47,59 @@ export default function Header() {
           >
             Get Quote
           </Link>
-          {/* Mobile menu */}
-          <button className="lg:hidden p-2 -mr-2 text-foreground hover:bg-surface rounded-md" aria-label="Menu">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden p-2 -mr-2 text-foreground hover:bg-surface rounded-md"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {menuOpen && (
+        <div className="lg:hidden border-t border-border bg-white">
+          <nav className="container-wide py-4 flex flex-col gap-1">
+            {SITE_CONFIG.nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="px-4 py-3 text-base font-medium text-foreground/80 hover:text-primary hover:bg-surface rounded-lg transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <div className="flex gap-3 mt-3 px-4 pt-3 border-t border-border">
+              <a
+                href={`https://wa.me/${SITE_CONFIG.whatsapp.replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center px-4 py-2.5 text-sm font-semibold bg-green-500 text-white rounded-lg"
+              >
+                WhatsApp
+              </a>
+              <Link
+                href="/inquiry"
+                onClick={() => setMenuOpen(false)}
+                className="flex-1 text-center px-4 py-2.5 text-sm font-semibold bg-primary text-white rounded-lg"
+              >
+                Get Quote
+              </Link>
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

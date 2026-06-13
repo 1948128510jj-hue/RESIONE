@@ -46,12 +46,13 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-3">Products</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li><Link href="/products" className="hover:text-white transition-colors">Standard Resin</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Tough / ABS-Like Resin</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Water Washable Resin</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Dental Model Resin</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">Casting Resin</Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors">All Products →</Link></li>
+              <li><Link href="/products?category=Anti-Impact%20%2F%20Nylon-Like" className="hover:text-white transition-colors">Anti-Impact / Nylon-Like</Link></li>
+              <li><Link href="/products?category=Tough%20%2F%20ABS-Like" className="hover:text-white transition-colors">Tough / ABS-Like Resin</Link></li>
+              <li><Link href="/products?category=Flexible%20%2F%20Elastic" className="hover:text-white transition-colors">Flexible / Elastic Resin</Link></li>
+              <li><Link href="/products?category=Water%20Washable" className="hover:text-white transition-colors">Water Washable Resin</Link></li>
+              <li><Link href="/products?category=Dental" className="hover:text-white transition-colors">Dental Resin</Link></li>
+              <li><Link href="/products?category=High%20Temperature" className="hover:text-white transition-colors">High Temperature Resin</Link></li>
+              <li><Link href="/products" className="hover:text-white transition-colors font-semibold">All Products →</Link></li>
             </ul>
           </div>
 
