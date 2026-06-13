@@ -1,7 +1,10 @@
-import { OEM_SERVICES, SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
 import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+
+const OEM_KEYS = ['formulation','labeling','packaging','techDoc'];
+const OEM_ICONS: Record<string,string> = {formulation:'🧪',labeling:'🏷️',packaging:'📦',techDoc:'📋'};
 
 export const metadata: Metadata = { title: "OEM & ODM Services", description: "Custom resin formulation, private labeling, and packaging solutions." };
 
@@ -19,11 +22,11 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
       </section>
       <section className="container-wide py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {OEM_SERVICES.map((item) => (
-            <div key={item.title} className="p-6 bg-surface border border-border rounded-xl hover:border-primary/30 transition-colors">
-              <div className="text-4xl mb-4">{item.icon}</div>
-              <h2 className="text-lg font-semibold mb-2">{item.title}</h2>
-              <p className="text-sm text-muted leading-relaxed">{item.description}</p>
+          {OEM_KEYS.map((k) => (
+            <div key={k} className="p-6 bg-surface border border-border rounded-xl hover:border-primary/30 transition-colors">
+              <div className="text-4xl mb-4">{OEM_ICONS[k]}</div>
+              <h2 className="text-lg font-semibold mb-2">{t(`oemItems.${k}.title`)}</h2>
+              <p className="text-sm text-muted leading-relaxed">{t(`oemItems.${k}.desc`)}</p>
             </div>
           ))}
         </div>

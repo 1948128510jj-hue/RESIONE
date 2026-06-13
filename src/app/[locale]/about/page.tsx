@@ -1,6 +1,10 @@
-import { SITE_CONFIG, WHY_CHOOSE_US } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
+
+const WHY_KEYS = ['rd','qc','shipping','oem','productLine','appFocused'];
+const WHY_ICONS: Record<string,string> = {rd:'🔬',qc:'✅',shipping:'🚢',oem:'🏭',productLine:'📚',appFocused:'🎯'};
+const CERT_KEYS = ['iso','rohs','reach','lab'];
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: "About Us", description: "Learn about ShenShuo Tech — a professional LCD UV-curing resin manufacturer." };
@@ -10,6 +14,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("about");
+  const th = await getTranslations("home");
   return (
     <div className="bg-white">
       <section className="bg-surface border-b border-border">
@@ -40,11 +45,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         <div className="container-wide">
           <h2 className="text-2xl font-bold text-center mb-8">{t("whyPartner")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {WHY_CHOOSE_US.map((item) => (
-              <div key={item.title} className="bg-white p-6 rounded-xl border border-border">
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{item.description}</p>
+            {WHY_KEYS.map((k) => (
+              <div key={k} className="bg-white p-6 rounded-xl border border-border">
+                <div className="text-3xl mb-3">{WHY_ICONS[k]}</div>
+                <h3 className="font-semibold mb-2">{th(`whyItems.${k}.title`)}</h3>
+                <p className="text-sm text-muted leading-relaxed">{th(`whyItems.${k}.desc`)}</p>
               </div>
             ))}
           </div>
@@ -53,11 +58,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <section className="container-wide py-12">
         <h2 className="text-2xl font-bold text-center mb-8">{t("certifications")}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
-          {[{ icon: "✅", name: "ISO 9001", desc: "Quality Management" },{ icon: "🧪", name: "RoHS", desc: "Hazardous Substance Compliance" },{ icon: "📋", name: "REACH", desc: "EU Chemical Regulation" },{ icon: "🔬", name: "In-House Testing", desc: "Batch Quality Control" }].map((cert) => (
-            <div key={cert.name} className="text-center p-4 bg-surface rounded-xl border border-border">
-              <div className="text-3xl mb-2">{cert.icon}</div>
-              <p className="font-semibold text-sm">{cert.name}</p>
-              <p className="text-xs text-muted">{cert.desc}</p>
+          {CERT_KEYS.map((k) => (
+            <div key={k} className="text-center p-4 bg-surface rounded-xl border border-border">
+              <div className="text-3xl mb-2">{k==='iso'?'✅':k==='rohs'?'🧪':k==='reach'?'📋':'🔬'}</div>
+              <p className="font-semibold text-sm">{t(`cert.${k}.name`)}</p>
+              <p className="text-xs text-muted">{t(`cert.${k}.desc`)}</p>
             </div>
           ))}
         </div>
