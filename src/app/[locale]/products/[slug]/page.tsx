@@ -10,6 +10,7 @@ import { useState, use } from "react";
 
 export default function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const t = useTranslations("products");
+  const td = useTranslations("products_data");
   const { slug } = use(params);
   const [imgError, setImgError] = useState(false);
 
@@ -64,7 +65,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h2 className="text-xl font-bold mb-3">{t("viewDetails")}</h2>
-              <p className="text-muted leading-relaxed">{product.description}</p>
+              <p className="text-muted leading-relaxed">{td(`${slug}.desc`)}</p>
             </div>
 
             <div>
@@ -73,7 +74,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 {product.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted">
                     <span className="text-primary mt-0.5 shrink-0">✓</span>
-                    {f}
+                    {td(`${slug}.feats.${i}`)}
                   </li>
                 ))}
               </ul>
@@ -83,7 +84,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
               <h2 className="text-xl font-bold mb-3">{t("applications")}</h2>
               <div className="flex flex-wrap gap-2">
                 {product.applications.map((a, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-surface border border-border rounded-full text-xs text-muted">{a}</span>
+                  <span key={i} className="px-3 py-1.5 bg-surface border border-border rounded-full text-xs text-muted">{td(`${slug}.apps.${i}`)}</span>
                 ))}
               </div>
             </div>
