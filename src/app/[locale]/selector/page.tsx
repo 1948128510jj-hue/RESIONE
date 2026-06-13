@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { ALL_PRODUCTS, type ProductData } from "@/lib/products-data";
 
@@ -81,6 +82,7 @@ function scoreProduct(product: ProductData, answers: Record<string, string>): nu
 }
 
 export default function SelectorPage() {
+  const t = useTranslations("selector");
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [results, setResults] = useState<ProductData[]>([]);
@@ -115,9 +117,9 @@ export default function SelectorPage() {
     <div className="bg-white min-h-screen">
       <section className="bg-surface border-b border-border">
         <div className="container-wide py-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">Resin Selector</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t("title")}</h1>
           <p className="text-muted max-w-xl">
-            Answer a few questions and we will recommend the best resin for your application.
+            {t("subtitle")}
           </p>
         </div>
       </section>
@@ -132,7 +134,7 @@ export default function SelectorPage() {
             </div>
             <p className="text-xs text-muted">Question {step + 1} of {QUESTIONS.length}</p>
 
-            <h2 className="text-2xl font-bold text-foreground">{currentQ.question}</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t(`q${step+1}`)}</h2>
 
             <div className="grid gap-3">
               {currentQ.options.map((opt) => (
@@ -186,9 +188,9 @@ export default function SelectorPage() {
             )}
 
             <div className="flex flex-wrap gap-3 justify-center pt-4">
-              <button onClick={reset} className="px-6 py-2.5 border border-border rounded-lg hover:border-primary transition-colors font-medium text-sm">Start Over</button>
-              <Link href="/products" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors font-medium text-sm">Browse All Products</Link>
-              <Link href="/inquiry" className="px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent/80 transition-colors font-medium text-sm">Request Custom Help</Link>
+              <button onClick={reset} className="px-6 py-2.5 border border-border rounded-lg hover:border-primary transition-colors font-medium text-sm">{t("restart")}</button>
+              <Link href="/products" className="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors font-medium text-sm">{t("browseAll")}</Link>
+              <Link href="/inquiry" className="px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent/80 transition-colors font-medium text-sm">{t("customHelp")}</Link>
             </div>
           </div>
         )}

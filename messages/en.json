@@ -59,6 +59,24 @@
         "title": "Application-Focused",
         "desc": "Our mission: To make 3D printing more practical. Every resin developed with real end-use in mind."
       }
+    },
+    "oemItems": {
+      "formulation": {
+        "title": "Custom Formulation",
+        "desc": "Resins tailored to your requirements — color, viscosity, mechanical properties, and more."
+      },
+      "labeling": {
+        "title": "Private Labeling",
+        "desc": "Your brand, our quality. Full white-label solutions with custom bottles, labels, and packaging."
+      },
+      "packaging": {
+        "title": "Packaging Customization",
+        "desc": "Flexible options from 500ml bottles to 25kg drums, with your branding throughout."
+      },
+      "techDoc": {
+        "title": "Technical Documentation",
+        "desc": "Complete SDS, TDS, and print parameter guides in your language for your customers."
+      }
     }
   },
   "products": {
@@ -136,7 +154,30 @@
     "customHelp": "Request Custom Help",
     "q1_text": "What are you printing?",
     "q2_text": "What property matters most?",
-    "q3_text": "Any special requirements?"
+    "q3_text": "Any special requirements?",
+    "q1_opts": [
+      "Miniatures / Figures / BJD",
+      "Functional / Mechanical Parts",
+      "Dental / Medical Models",
+      "Jewelry / Casting",
+      "Prototypes / Display",
+      "Not Sure / General Use"
+    ],
+    "q2_opts": [
+      "Toughness / Impact Resistance",
+      "Heat Resistance",
+      "Flexibility / Elasticity",
+      "High Detail / Precision",
+      "Easy Post-Processing (Water)",
+      "No Preference"
+    ],
+    "q3_opts": [
+      "Transparent / Clear",
+      "Non-Yellowing",
+      "Low Odor",
+      "Matte Finish",
+      "No Special Requirements"
+    ]
   },
   "services": {
     "title": "OEM & ODM Services",
@@ -321,5 +362,35 @@
   "notfound": {
     "title": "Page Not Found",
     "msg": "The page you are looking for might have been moved or does not exist."
+  },
+  "categories": {
+    "antiimpact": {
+      "name": "Anti-Impact / Nylon-Like",
+      "desc": "Industry-leading impact resistance — nylon-like durability, outdoor-ready, long-term non-brittle"
+    },
+    "tough": {
+      "name": "Tough / ABS-Like",
+      "desc": "Engineering-grade tough resins with excellent impact resistance, drillable & machinable"
+    },
+    "flexible": {
+      "name": "Flexible / Elastic",
+      "desc": "Rubber-like flexible and end-use elastomer resins — from 50A ultra-soft to 80A industrial elastic"
+    },
+    "standard": {
+      "name": "Standard",
+      "desc": "High-precision standard & specialty resins for general-purpose and professional printing"
+    },
+    "hightemp": {
+      "name": "High Temperature",
+      "desc": "Heat-resistant resins for demanding thermal environments up to 140°C"
+    },
+    "dental": {
+      "name": "Dental",
+      "desc": "Dental model, gingiva, and castable resins for dental professionals"
+    },
+    "waterwash": {
+      "name": "Water Washable",
+      "desc": "Easy-to-clean resins — rinse with water, no IPA required"
+    }
   }
 }

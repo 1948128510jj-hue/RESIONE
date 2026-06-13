@@ -53,8 +53,11 @@ export function HeroBanner() {
   );
 }
 
+const CAT_MAP: Record<string,string> = {'Anti-Impact / Nylon-Like':'antiimpact','Tough / ABS-Like':'tough','Flexible / Elastic':'flexible','Standard':'standard','High Temperature':'hightemp','Dental':'dental','Water Washable':'waterwash'};
+
 export function ProductCategoriesSection() {
   const t = useTranslations("home");
+  const tc = useTranslations("categories");
   const locale = useLocale();
   return (
     <section className="py-16 bg-white">
@@ -64,13 +67,16 @@ export function ProductCategoriesSection() {
           <p className="text-muted max-w-xl mx-auto">{t("productsSub")}</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {PRODUCT_CATEGORIES.map((cat) => (
-            <Link key={cat.key} href={`/${locale}/products?category=${cat.key}`} className="group p-5 border border-border rounded-xl hover:border-primary hover:shadow-md transition-all bg-surface/50 hover:bg-surface">
-              <div className="text-3xl mb-3">{cat.icon}</div>
-              <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{cat.name}</h3>
-              <p className="text-xs text-muted mt-1 leading-relaxed">{cat.description}</p>
-            </Link>
-          ))}
+          {PRODUCT_CATEGORIES.map((cat) => {
+            const ck = CAT_MAP[cat.key] || 'standard';
+            return (
+              <Link key={cat.key} href={`/${locale}/products?category=${encodeURIComponent(cat.key)}`} className="group p-5 border border-border rounded-xl hover:border-primary hover:shadow-md transition-all bg-surface/50 hover:bg-surface">
+                <div className="text-3xl mb-3">{cat.icon}</div>
+                <h3 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors">{tc(`${ck}.name`)}</h3>
+                <p className="text-xs text-muted mt-1 leading-relaxed">{tc(`${ck}.desc`)}</p>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -119,8 +125,8 @@ export function OEMServicesSection() {
           {OEM_KEYS.map((k) => (
             <div key={k} className="p-6 bg-surface rounded-xl text-center border border-border hover:border-primary/30 transition-colors">
               <div className="text-4xl mb-4">{OEM_ICONS[k]}</div>
-              <h3 className="font-semibold text-foreground mb-2">{t(`whyItems.${k}.title`)}</h3>
-              <p className="text-sm text-muted leading-relaxed">{t(`whyItems.${k}.desc`)}</p>
+              <h3 className="font-semibold text-foreground mb-2">{t(`oemItems.${k}.title`)}</h3>
+              <p className="text-sm text-muted leading-relaxed">{t(`oemItems.${k}.desc`)}</p>
             </div>
           ))}
         </div>
