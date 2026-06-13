@@ -44,7 +44,7 @@ export function SpecificationTable({ specs }: SpecTableProps) {
 
   return (
     <div className="border border-border rounded-xl overflow-hidden">
-      <div className="bg-surface px-4 py-3 border-b border-border">
+      <div className="bg-space-hover px-4 py-3 border-b border-border">
         <h3 className="font-semibold text-foreground text-sm">Technical Specifications</h3>
       </div>
       <div className="px-4 py-2">
@@ -69,10 +69,10 @@ export function ProductCard({ slug, name, tagline, category }: ProductCardProps)
   return (
     <Link
       href={`/products/${slug}`}
-      className="group block bg-white border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-lg transition-all"
+      className="group block bg-space-card border border-border rounded-xl overflow-hidden hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all"
     >
       {/* Product poster image */}
-      <div className="aspect-square bg-gradient-to-br from-surface to-gray-200 flex items-center justify-center relative overflow-hidden">
+      <div className="aspect-square bg-gradient-to-br from-space-light to-space-hover flex items-center justify-center relative overflow-hidden">
         <img
           src={`/images/products/${slug}_1.jpeg`}
           alt={name}
@@ -86,14 +86,14 @@ export function ProductCard({ slug, name, tagline, category }: ProductCardProps)
           <div className="text-6xl opacity-30">🧪</div>
         </div>
         <div className="absolute top-3 left-3">
-          <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded-full">{category}</span>
+          <span className="px-2 py-0.5 bg-accent/15 text-accent text-xs font-medium rounded-full">{category}</span>
         </div>
       </div>
       <div className="p-4">
         <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{name}</h3>
         <p className="text-xs text-muted mt-1 line-clamp-2">{tagline}</p>
         <div className="mt-3 flex items-center justify-between">
-          <span className="text-xs text-primary font-medium">View Details →</span>
+          <span className="text-xs text-accent font-medium">View Details →</span>
         </div>
       </div>
     </Link>
