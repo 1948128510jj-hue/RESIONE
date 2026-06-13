@@ -1,11 +1,13 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Footer() {
   const locale = useLocale();
+  const t = useTranslations("footer");
+  const tn = useTranslations("nav");
 
   return (
     <footer className="bg-primary-dark text-white">
@@ -27,16 +29,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-3">Quick Links</h3>
+            <h3 className="font-bold text-lg mb-3">{t("quickLinks")}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               {SITE_CONFIG.nav.map((item) => (
-                <li key={item.href}><Link href={`/${locale}${item.href}`} className="hover:text-white transition-colors">{item.label}</Link></li>
+                <li key={item.href}><Link href={`/${locale}${item.href}`} className="hover:text-white transition-colors">{tn(item.href === '/' ? 'home' : item.href.replace('/', ''))}</Link></li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-3">Products</h3>
+            <h3 className="font-bold text-lg mb-3">{t("products")}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li><Link href={`/${locale}/products?category=Anti-Impact%20%2F%20Nylon-Like`} className="hover:text-white transition-colors">Anti-Impact / Nylon-Like</Link></li>
               <li><Link href={`/${locale}/products?category=Tough%20%2F%20ABS-Like`} className="hover:text-white transition-colors">Tough / ABS-Like</Link></li>
@@ -44,12 +46,12 @@ export default function Footer() {
               <li><Link href={`/${locale}/products?category=Water%20Washable`} className="hover:text-white transition-colors">Water Washable</Link></li>
               <li><Link href={`/${locale}/products?category=Dental`} className="hover:text-white transition-colors">Dental</Link></li>
               <li><Link href={`/${locale}/products?category=High%20Temperature`} className="hover:text-white transition-colors">High Temperature</Link></li>
-              <li><Link href={`/${locale}/products`} className="hover:text-white transition-colors font-semibold">All Products →</Link></li>
+              <li><Link href={`/${locale}/products`} className="hover:text-white transition-colors font-semibold">{t("allProducts")}</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-bold text-lg mb-3">Contact Us</h3>
+            <h3 className="font-bold text-lg mb-3">{t("contactUs")}</h3>
             <ul className="space-y-2 text-sm text-gray-300">
               <li>📧 {SITE_CONFIG.email}</li>
               <li>📱 {SITE_CONFIG.whatsapp}</li>
