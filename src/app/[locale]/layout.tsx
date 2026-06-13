@@ -39,7 +39,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="antialiased">
-      <body className="min-h-screen flex flex-col bg-bg">
+      <body className="min-h-screen flex flex-col bg-white">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

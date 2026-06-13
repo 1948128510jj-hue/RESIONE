@@ -19,7 +19,7 @@ export default function Footer() {
   const catNames = ['Anti-Impact / Nylon-Like', 'Tough / ABS-Like', 'Flexible / Elastic', 'Water Washable', 'Dental', 'High Temperature'];
 
   return (
-    <footer className="bg-brand-deep text-white border-t border-border/30">
+    <footer className="bg-brand text-white">
       <div className="container-wide py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>

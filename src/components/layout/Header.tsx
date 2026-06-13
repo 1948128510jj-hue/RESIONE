@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-bg/80 backdrop-blur-xl border-b border-border/50">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-border shadow-sm">
       <div className="container-wide flex items-center justify-between h-16 sm:h-[68px]">
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center shrink-0 gap-3">
@@ -32,7 +32,7 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-0.5">
           {SITE_CONFIG.nav.map((item) => (
             <Link key={item.href} href={`/${locale}${item.href}`}
-              className="px-3.5 py-2 text-sm font-medium text-muted hover:text-white hover:bg-surface-hover rounded-md transition-all duration-200">
+              className="px-3.5 py-2 text-sm font-medium text-muted hover:text-brand hover:bg-gray-50 rounded-md transition-all duration-200">
               {t(item.href === '/' ? 'home' : item.href.replace('/', ''))}
             </Link>
           ))}
@@ -43,14 +43,14 @@ export default function Header() {
           {/* Lang switcher */}
           <div className="relative hidden sm:block">
             <button onClick={() => setLangOpen(!langOpen)}
-              className="px-2.5 py-2 text-xs font-semibold text-muted border border-border/50 rounded-md hover:border-accent/50 hover:text-accent transition-colors">
+              className="px-2.5 py-2 text-xs font-semibold text-muted border border-border rounded-md hover:border-accent hover:text-accent transition-colors">
               {LANG_LABELS[locale] || "EN"}
             </button>
             {langOpen && (
-              <div className="absolute right-0 top-full mt-1 bg-surface border border-border rounded-lg shadow-2xl py-1 z-50 min-w-[100px]">
+              <div className="absolute right-0 top-full mt-1 bg-white border border-border rounded-lg shadow-lg py-1 z-50 min-w-[100px]">
                 {Object.entries(LANG_LABELS).map(([code, label]) => (
                   <button key={code} onClick={() => switchLang(code)}
-                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-surface-hover transition-colors ${locale === code ? 'font-bold text-accent' : 'text-muted'}`}>
+                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${locale === code ? 'font-bold text-accent' : 'text-foreground'}`}>
                     {label}
                   </button>
                 ))}

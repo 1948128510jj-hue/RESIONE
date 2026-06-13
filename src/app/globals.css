@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ===== RESIONE Brand Core ===== */
-  --color-brand:          #0a1628;
-  --color-brand-deep:     #060f1c;
-  --color-brand-surface:  #0f1d33;
-  --color-brand-card:     #132340;
+  /* ===== Brand Core ===== */
+  --color-brand:          #0f1d33;
+  --color-brand-deep:     #080f1a;
+  --color-brand-surface:  #152238;
+  --color-brand-card:     #1a2d45;
 
-  /* ===== Accent — Aurora Cyan / Tech Blue ===== */
+  /* ===== Accent ===== */
   --color-accent:         #00c6c0;
   --color-accent-glow:    #00f0e8;
   --color-accent-blue:    #3b82f6;
   --color-accent-blue-dim:#2563eb;
 
-  /* ===== Neutrals ===== */
-  --color-bg:             #080c14;
-  --color-bg-elevated:    #0d1320;
-  --color-surface:        #111827;
-  --color-surface-hover:  #1a2332;
-  --color-border:         #1e2d42;
-  --color-border-light:   #2a3a52;
+  /* ===== Backgrounds (lighter for readability) ===== */
+  --color-bg:             #f0f2f5;
+  --color-bg-dark:        #e2e6ec;
+  --color-surface:        #ffffff;
+  --color-surface-hover:  #f7f8fa;
+  --color-border:         #d1d5db;
+  --color-border-light:   #e5e7eb;
 
   /* ===== Text ===== */
-  --color-foreground:     #e8ecf1;
-  --color-muted:          #8896a8;
-  --color-muted-dim:      #5a6a7e;
+  --color-foreground:     #111827;
+  --color-muted:          #4b5563;
+  --color-muted-dim:      #6b7280;
   --color-white:          #ffffff;
 
   /* ===== Status ===== */
@@ -45,26 +45,14 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 html { scroll-behavior: smooth; }
 
-/* ========================================
-   Selection
-   ======================================== */
 ::selection {
   background: rgba(0, 198, 192, 0.25);
-  color: #fff;
+  color: #111827;
 }
-
-/* ========================================
-   Scrollbar — dark minimal
-   ======================================== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-bg); }
-::-webkit-scrollbar-thumb { background: var(--color-border-light); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-muted-dim); }
 
 /* ========================================
    Utilities
@@ -74,97 +62,58 @@ html { scroll-behavior: smooth; }
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
-  /* Glow ring — subtle accent border */
-  .ring-glow {
-    box-shadow: 0 0 0 1px var(--color-border), 0 0 20px rgba(0,198,192,0.06);
+  /* Card */
+  .card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: 12px;
   }
-  .ring-glow:hover {
-    box-shadow: 0 0 0 1px var(--color-accent), 0 0 30px rgba(0,198,192,0.12);
+  .card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 4px 24px rgba(0,198,192,0.08);
   }
 
   /* Gradient text */
   .text-gradient {
-    background: linear-gradient(135deg, #fff 0%, #00c6c0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  .text-gradient-blue {
-    background: linear-gradient(135deg, #e8ecf1 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #0f1d33 0%, #00c6c0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Glass surface */
-  .glass {
-    background: rgba(255,255,255,0.03);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.06);
-  }
-
-  /* Geometric line */
-  .geo-line {
-    position: relative;
-  }
-  .geo-line::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-    opacity: 0.3;
-  }
-
-  /* Card default */
-  .card-dark {
-    background: var(--color-brand-card);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-  }
-  .card-dark:hover {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 24px rgba(0,198,192,0.08);
-  }
-
-  /* Button variants */
+  /* Button — primary */
   .btn-primary {
     @apply inline-flex items-center px-6 py-3 font-semibold rounded-lg transition-all duration-300;
     background: var(--color-accent);
-    color: #000;
+    color: #fff;
   }
   .btn-primary:hover {
-    background: var(--color-accent-glow);
-    box-shadow: 0 0 30px rgba(0,198,192,0.25);
+    background: #00b3ad;
+    box-shadow: 0 4px 20px rgba(0,198,192,0.3);
     transform: translateY(-1px);
   }
+  /* Button — outline */
   .btn-outline {
     @apply inline-flex items-center px-6 py-3 font-semibold rounded-lg transition-all duration-300;
-    border: 1px solid var(--color-border-light);
+    border: 1.5px solid var(--color-border);
     color: var(--color-foreground);
   }
   .btn-outline:hover {
     border-color: var(--color-accent);
     color: var(--color-accent);
-    box-shadow: 0 0 20px rgba(0,198,192,0.08);
   }
 
   /* Section divider */
   .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-border-light), transparent);
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
   }
 
-  /* Animate on scroll base */
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+  /* Tag / Badge */
+  .tag {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+    background: rgba(0,198,192,0.08);
+    color: #009e98;
+    border: 1px solid rgba(0,198,192,0.2);
   }
 }
