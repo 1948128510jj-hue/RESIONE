@@ -72,7 +72,7 @@ export function ProductCard({ slug, name, tagline, category }: ProductCardProps)
       className="group block bg-space-card border border-border rounded-xl overflow-hidden hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all"
     >
       {/* Product poster image */}
-      <div className="aspect-square bg-gradient-to-br from-space-light to-space-hover flex items-center justify-center relative overflow-hidden">
+      <div className="aspect-[3/4] bg-gradient-to-br from-space-light to-space-hover flex items-center justify-center relative overflow-hidden p-6">
         <img
           src={`/images/products/${slug}_1.jpeg`}
           alt={name}

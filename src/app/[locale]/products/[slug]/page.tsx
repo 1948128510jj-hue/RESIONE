@@ -30,7 +30,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Poster-style product image (half-page catalog crop) */}
-          <div className="aspect-[3/4] bg-space-card rounded-2xl flex items-center justify-center overflow-hidden border border-border">
+          <div className="aspect-[3/4] bg-space-card rounded-2xl flex items-center justify-center overflow-hidden border border-border p-6">
             {!imgError ? (
               <img
                 src={`/images/products/${product.slug}.png`}
