@@ -70,7 +70,7 @@ export default function Header() {
             Get Quote
           </Link>
           {/* Mobile hamburger */}
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 -mr-2 text-muted hover:text-white rounded-md" aria-label="Toggle menu">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 -mr-2 text-foreground hover:text-accent rounded-md" aria-label="Toggle menu">
             {menuOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
             ) : (
@@ -86,7 +86,7 @@ export default function Header() {
           <nav className="container-wide py-4 flex flex-col gap-1">
             {SITE_CONFIG.nav.map((item) => (
               <Link key={item.href} href={`/${locale}${item.href}`} onClick={() => setMenuOpen(false)}
-                className="px-4 py-3 text-base font-medium text-muted hover:text-white hover:bg-surface-hover rounded-lg transition-colors">
+                className="px-4 py-3 text-base font-medium text-foreground hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
                 {t(item.href === '/' ? 'home' : item.href.replace('/', ''))}
               </Link>
             ))}
