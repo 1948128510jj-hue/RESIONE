@@ -47,10 +47,10 @@ export default function Header() {
               {LANG_LABELS[locale] || "EN"}
             </button>
             {langOpen && (
-              <div className="absolute right-0 top-full mt-1 bg-white border border-border rounded-lg shadow-lg py-1 z-50 min-w-[100px]">
+              <div className="absolute right-0 top-full mt-1 rounded-lg shadow-xl py-1 z-50 min-w-[100px] bg-gradient-to-b from-[#1a1f2e] to-[#0d1425] border border-accent/20 backdrop-blur-md">
                 {Object.entries(LANG_LABELS).map(([code, label]) => (
                   <button key={code} onClick={() => switchLang(code)}
-                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-gray-50 transition-colors ${locale === code ? 'font-bold text-accent' : 'text-foreground'}`}>
+                    className={`block w-full text-left px-4 py-2 text-sm transition-colors ${locale === code ? 'font-bold text-accent bg-accent/10' : 'text-foreground hover:bg-white/5 hover:text-white'}`}>
                     {label}
                   </button>
                 ))}
@@ -86,7 +86,7 @@ export default function Header() {
           <nav className="container-wide py-4 flex flex-col gap-1">
             {SITE_CONFIG.nav.map((item) => (
               <Link key={item.href} href={`/${locale}${item.href}`} onClick={() => setMenuOpen(false)}
-                className="px-4 py-3 text-base font-medium text-foreground hover:text-accent hover:bg-gray-50 rounded-lg transition-colors">
+                className="px-4 py-3 text-base font-medium text-foreground hover:text-accent hover:bg-white/5 rounded-lg transition-colors">
                 {t(item.href === '/' ? 'home' : item.href.replace('/', ''))}
               </Link>
             ))}

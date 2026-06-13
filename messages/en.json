@@ -20,7 +20,6 @@
     "exploreProducts": "Explore Products",
     "requestQuote": "Request a Quote",
     "chatWhatsApp": "Chat on WhatsApp",
-    "trustISO": "✅ ISO 9001 Certified",
     "trustCountries": "🚢 50+ Countries",
     "trustRD": "🔬 In-House R&D",
     "trustOEM": "📦 OEM/ODM",
@@ -238,10 +237,6 @@
     "p2": "Our in-house R&D team continuously develops new formulations to meet evolving market demands. From standard prototyping resins to specialized dental, casting, and engineering-grade materials, every product undergoes rigorous quality testing before reaching our customers.",
     "p3": "We believe in building long-term partnerships. Whether you are a distributor looking to expand your product line or a business seeking custom resin solutions, we are your reliable partner in 3D printing materials.",
     "cert": {
-      "iso": {
-        "name": "ISO 9001",
-        "desc": "Quality Management"
-      },
       "rohs": {
         "name": "RoHS",
         "desc": "Hazardous Substance Compliance"

@@ -3,10 +3,17 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Inter } from "next/font/google";
 import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingInquiry from "@/components/inquiry/FloatingInquiry";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -38,8 +45,10 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="antialiased">
-      <body className="min-h-screen flex flex-col bg-space">
+    <html lang={locale} className={`antialiased ${inter.variable}`}>
+      <body className="min-h-screen flex flex-col bg-space font-sans">
+        {/* Cosmic starfield layer */}
+        <div className="cosmic-stars" aria-hidden="true" />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

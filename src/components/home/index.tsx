@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
-import ProductBurst from "./ProductBurst";
+import HeroAnimation from "./HeroAnimation";
 import { PRODUCT_CATEGORIES } from "@/lib/products";
 
 /* ================================================================
@@ -48,20 +48,19 @@ export function HeroBanner() {
               </Link>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-dim">
-              <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustISO")}</span>
               <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustCountries")}</span>
               <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustRD")}</span>
               <span className="flex items-center gap-1.5"><span className="w-1 h-1 rounded-full bg-accent/60" />{t("trustOEM")}</span>
             </div>
           </div>
-          {/* RIGHT: Animation */}
+          {/* RIGHT: Hero Animation — droplets orbit → shrink → products burst */}
           <div className="hidden lg:flex items-center justify-center">
-            <ProductBurst />
+            <HeroAnimation />
           </div>
         </div>
         {/* Mobile: show animation below text */}
-        <div className="lg:hidden mt-8">
-          <ProductBurst />
+        <div className="lg:hidden mt-8 flex justify-center">
+          <HeroAnimation />
         </div>
       </div>
     </section>

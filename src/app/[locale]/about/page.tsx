@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 const WHY_KEYS = ['rd','qc','shipping','oem','productLine','appFocused'];
 const WHY_ICONS: Record<string,string> = {rd:'🔬',qc:'✅',shipping:'🚢',oem:'🏭',productLine:'📚',appFocused:'🎯'};
-const CERT_KEYS = ['iso','rohs','reach','lab'];
+const CERT_KEYS = ['rohs','reach','lab'];
 
 export async function generateMetadata(): Promise<Metadata> {
   return { title: "About Us", description: "Learn about ShenShuo Tech — a professional LCD UV-curing resin manufacturer." };
@@ -33,11 +33,14 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               <p>{t("p3")}</p>
             </div>
           </div>
-          <div className="aspect-video bg-gradient-to-br from-surface to-gray-200 rounded-2xl flex items-center justify-center">
-            <div className="text-center text-muted">
-              <div className="text-6xl mb-3">🏭</div>
-              <p className="text-sm">Factory / Lab photo placeholder</p>
-            </div>
+          <div className="aspect-video rounded-2xl overflow-hidden">
+            <video
+              className="w-full h-full object-cover"
+              src="/about-factory.mp4"
+              controls
+              preload="metadata"
+              poster="/about-factory-poster.jpg"
+            />
           </div>
         </div>
       </section>
