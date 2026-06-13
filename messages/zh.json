@@ -237,7 +237,7 @@
     "company": "公司名称 *",
     "email": "邮箱 *",
     "phone": "电话 / WhatsApp",
-    "resinType": "感兴趣的树脂类型",
+    "resinType": "您感兴趣的树脂类型",
     "quantity": "预估月用量",
     "priceRange": "目标价格区间",
     "requirements": "其他需求 / 留言",
@@ -248,7 +248,11 @@
     "step3": "必要时讨论定制方案",
     "step4": "样品生产（如需）",
     "step5": "批量订单生产与发货",
-    "heroSub": "填写以下表单，我们将在24小时内回复报价、样品和技术建议。"
+    "heroSub": "填写以下表单，我们将在24小时内回复报价、样品和技术建议。",
+    "selectResin": "请选择树脂类型...",
+    "selectQuantity": "请选择数量...",
+    "selectRange": "请选择区间...",
+    "preferDirect": "更希望直接联系？"
   },
   "footer": {
     "companyDesc": "专业LCD光固化3D打印树脂制造商，产品销往全球50+国家和地区。",
@@ -269,5 +273,9 @@
     "backHome": "返回首页",
     "browseProducts": "浏览产品",
     "contactUs": "联系我们"
+  },
+  "notfound": {
+    "title": "页面未找到",
+    "msg": "您访问的页面可能已被移动或不存在。"
   }
 }

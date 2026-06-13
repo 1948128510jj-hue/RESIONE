@@ -1,14 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SpecificationTable } from "@/components/products";
 import { SITE_CONFIG } from "@/lib/constants";
 import { ALL_PRODUCTS } from "@/lib/products-data";
 import { useState, use } from "react";
-import type { Metadata } from "next";
 
 export default function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const t = useTranslations("products");
   const { slug } = use(params);
   const [imgError, setImgError] = useState(false);
 
@@ -53,8 +54,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             <SpecificationTable specs={product.specs} />
 
             <div className="flex flex-wrap gap-3 mt-6">
-              <Link href="/inquiry" className="flex-1 sm:flex-none px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors text-center">Request a Quote</Link>
-              <a href={`https://wa.me/${(SITE_CONFIG.whatsapp || '').replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors text-center">WhatsApp Inquiry</a>
+              <Link href="/inquiry" className="flex-1 sm:flex-none px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors text-center">{t("requestQuote")}</Link>
+              <a href={`https://wa.me/${(SITE_CONFIG.whatsapp || '').replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="flex-1 sm:flex-none px-6 py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors text-center">{t("whatsappInquiry")}</a>
             </div>
           </div>
         </div>
@@ -62,12 +63,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <div>
-              <h2 className="text-xl font-bold mb-3">Product Description</h2>
+              <h2 className="text-xl font-bold mb-3">{t("viewDetails")}</h2>
               <p className="text-muted leading-relaxed">{product.description}</p>
             </div>
 
             <div>
-              <h2 className="text-xl font-bold mb-3">Key Features</h2>
+              <h2 className="text-xl font-bold mb-3">{t("features")}</h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {product.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted">
@@ -79,7 +80,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             </div>
 
             <div>
-              <h2 className="text-xl font-bold mb-3">Applications</h2>
+              <h2 className="text-xl font-bold mb-3">{t("applications")}</h2>
               <div className="flex flex-wrap gap-2">
                 {product.applications.map((a, i) => (
                   <span key={i} className="px-3 py-1.5 bg-surface border border-border rounded-full text-xs text-muted">{a}</span>
@@ -88,17 +89,17 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             </div>
 
             <div>
-              <h2 className="text-xl font-bold mb-3">Compatible Printers</h2>
+              <h2 className="text-xl font-bold mb-3">{t("compatibleWith")}</h2>
               <p className="text-sm text-muted">{product.compatibleWith.join(" · ")}</p>
             </div>
           </div>
 
           <div className="space-y-6">
             <div className="bg-surface border border-border rounded-xl p-5">
-              <h3 className="font-semibold mb-3">Order Information</h3>
+              <h3 className="font-semibold mb-3">{t("orderInfo")}</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted">Bottle Sizes</span>
+                  <span className="text-muted">{t("bottleSize")}</span>
                   <span className="font-medium">{product.bottleSize}</span>
                 </div>
                 <div className="flex justify-between">
@@ -110,14 +111,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                   <span className="font-medium">{product.leadTime}</span>
                 </div>
               </div>
-              <Link href="/inquiry" className="block text-center mt-4 px-4 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors text-sm">Get Quote Now</Link>
+              <Link href="/inquiry" className="block text-center mt-4 px-4 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors text-sm">{t("requestQuote")}</Link>
             </div>
 
             <div className="bg-surface border border-border rounded-xl p-5">
-              <h3 className="font-semibold mb-3">Technical Documents</h3>
+              <h3 className="font-semibold mb-3">{t("techDocs")}</h3>
               <div className="space-y-2">
-                <a href="#" className="flex items-center gap-2 text-sm text-primary hover:underline"><span>📄</span> SDS (Safety Data Sheet)</a>
-                <a href="#" className="flex items-center gap-2 text-sm text-primary hover:underline"><span>📊</span> TDS (Technical Data Sheet)</a>
+                <a href="#" className="flex items-center gap-2 text-sm text-primary hover:underline"><span>📄</span> {t("sds")}</a>
+                <a href="#" className="flex items-center gap-2 text-sm text-primary hover:underline"><span>📊</span> {t("tds")}</a>
                 <a href="#" className="flex items-center gap-2 text-sm text-primary hover:underline"><span>🖨️</span> Print Parameter Guide</a>
               </div>
             </div>

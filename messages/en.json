@@ -248,7 +248,11 @@
     "step3": "We discuss customization options if needed",
     "step4": "Sample production (if required)",
     "step5": "Bulk order and delivery",
-    "heroSub": "Fill out the form below and we will get back to you within 24 hours with pricing, samples, and technical recommendations."
+    "heroSub": "Fill out the form below and we will get back to you within 24 hours with pricing, samples, and technical recommendations.",
+    "selectResin": "Select a resin type...",
+    "selectQuantity": "Select quantity...",
+    "selectRange": "Select range...",
+    "preferDirect": "Prefer Direct Contact?"
   },
   "footer": {
     "companyDesc": "Professional manufacturer of LCD UV-curing 3D printing resins. Serving customers in 50+ countries worldwide.",
@@ -269,5 +273,9 @@
     "backHome": "Back to Home",
     "browseProducts": "Browse Products",
     "contactUs": "Contact Us"
+  },
+  "notfound": {
+    "title": "Page Not Found",
+    "msg": "The page you are looking for might have been moved or does not exist."
   }
 }
