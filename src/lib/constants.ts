@@ -18,8 +18,10 @@ export const SITE_CONFIG = {
   nav: [
     { label: 'Home', href: '/' },
     { label: 'Products', href: '/products' },
+    { label: 'Compare', href: '/compare' },
     { label: 'Resin Selector', href: '/selector' },
     { label: 'Services', href: '/services' },
+    { label: 'Blog', href: '/blog' },
     { label: 'About Us', href: '/about' },
     { label: 'Resources', href: '/resources' },
     { label: 'Contact', href: '/contact' },
