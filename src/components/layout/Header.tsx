@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -12,13 +12,16 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const locale = useLocale();
+  const router = useRouter();
   const pathname = usePathname();
 
-  // Build switch URL: pathname in next-intl is WITHOUT locale prefix
-  function switchHref(target: string) {
-    const cleanPath = pathname === '/' ? '' : pathname;
-    return `/${target}${cleanPath}`;
-  }
+  const switchLang = useCallback((target: string) => {
+    setLangOpen(false);
+    setMenuOpen(false);
+    // pathname includes locale, e.g. /en/products → replace with /zh/products
+    const newPath = pathname.replace(/^\/(en|zh|ja)(\/|$)/, `/${target}$2`);
+    router.push(newPath);
+  }, [pathname, router]);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border shadow-sm">
@@ -54,14 +57,13 @@ export default function Header() {
             {langOpen && (
               <div className="absolute right-0 top-full mt-1 bg-white border border-border rounded-lg shadow-lg py-1 z-50 min-w-[100px]">
                 {Object.entries(LANG_LABELS).map(([code, label]) => (
-                  <Link
+                  <button
                     key={code}
-                    href={switchHref(code)}
-                    onClick={() => setLangOpen(false)}
-                    className={`block px-4 py-2 text-sm hover:bg-surface transition-colors ${locale === code ? 'font-bold text-primary' : 'text-foreground'}`}
+                    onClick={() => switchLang(code)}
+                    className={`block w-full text-left px-4 py-2 text-sm hover:bg-surface transition-colors ${locale === code ? 'font-bold text-primary' : 'text-foreground'}`}
                   >
                     {label}
-                  </Link>
+                  </button>
                 ))}
               </div>
             )}
@@ -115,9 +117,9 @@ export default function Header() {
             {/* Mobile language switcher */}
             <div className="flex gap-2 px-4 py-3 border-t border-border">
               {Object.entries(LANG_LABELS).map(([code, label]) => (
-                <Link key={code} href={switchHref(code)} onClick={() => setMenuOpen(false)} className={`px-3 py-1.5 text-xs rounded-full border ${locale === code ? 'border-primary bg-primary/10 text-primary font-bold' : 'border-border text-foreground/60'}`}>
+                <button key={code} onClick={() => switchLang(code)} className={`px-3 py-1.5 text-xs rounded-full border ${locale === code ? 'border-primary bg-primary/10 text-primary font-bold' : 'border-border text-foreground/60'}`}>
                   {label}
-                </Link>
+                </button>
               ))}
             </div>
             <div className="flex gap-3 mt-2 px-4 pt-2 border-t border-border">
