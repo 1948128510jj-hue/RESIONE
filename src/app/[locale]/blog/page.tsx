@@ -61,8 +61,8 @@ const CATEGORIES = ["All", "Material Science", "Product Guide", "Dental", "Indus
 
 export default function BlogPage() {
   return (
-    <div className="bg-white">
-      <section className="bg-surface border-b border-border">
+    <div className="">
+      <section className="bg-space-card border-b border-border">
         <div className="container-wide py-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">RESIONE Blog</h1>
           <p className="text-muted max-w-2xl">Technical articles, application guides, and industry insights on LCD 3D printing resins.</p>
@@ -101,7 +101,7 @@ export default function BlogPage() {
           <form action="https://formsubmit.co/1948128510jj@gmail.com" method="POST" className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input type="hidden" name="_subject" value="Blog Newsletter Subscription" />
             <input type="email" name="email" required placeholder="Your email address" className="flex-1 px-4 py-3 rounded-lg text-foreground text-sm border-0 focus:ring-2 focus:ring-white/30" />
-            <button type="submit" className="px-6 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">Subscribe</button>
+            <button type="submit" className="px-6 py-3  text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">Subscribe</button>
           </form>
         </div>
       </section>

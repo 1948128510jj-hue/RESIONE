@@ -19,8 +19,8 @@ const COMPARISONS = [
 
 export default function ComparePage() {
   return (
-    <div className="bg-white">
-      <section className="bg-surface border-b border-border">
+    <div className="">
+      <section className="bg-space-card border-b border-border">
         <div className="container-wide py-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">HeyGears vs RESIONE — Resin Comparison</h1>
           <p className="text-muted max-w-2xl">Find the right RESIONE alternative for your HeyGears resin. Based on performance data, color matching, price analysis, and real-world usage across 8 popular HeyGears resins.</p>
@@ -45,7 +45,7 @@ export default function ComparePage() {
             </thead>
             <tbody>
               {COMPARISONS.map((c) => (
-                <tr key={c.rank} className="border-b border-border hover:bg-surface/50 transition-colors">
+                <tr key={c.rank} className="border-b border-border hover:bg-space-card/50 transition-colors">
                   <td className="p-3 font-bold text-muted">{c.rank}</td>
                   <td className="p-3 font-semibold text-primary">{c.hg}</td>
                   <td className="p-3 text-xs text-muted max-w-[200px]">{c.hgDesc}</td>

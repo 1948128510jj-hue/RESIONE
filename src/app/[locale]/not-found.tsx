@@ -6,7 +6,7 @@ export default function NotFound() {
   const t = useTranslations("notfound");
   const c = useTranslations("common");
   return (
-    <div className="min-h-[70vh] flex items-center justify-center bg-white">
+    <div className="min-h-[70vh] flex items-center justify-center ">
       <div className="text-center px-6 py-16">
         <h1 className="text-7xl font-extrabold text-primary mb-4">404</h1>
         <h2 className="text-2xl font-semibold text-foreground mb-3">{t("title")}</h2>

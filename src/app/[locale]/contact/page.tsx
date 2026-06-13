@@ -9,8 +9,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function ContactPage() {
   const t = await getTranslations("contact");
   return (
-    <div className="bg-white">
-      <section className="bg-surface border-b border-border">
+    <div className="">
+      <section className="bg-space-card border-b border-border">
         <div className="container-wide py-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t("title")}</h1>
           <p className="text-muted max-w-2xl">{t("subtitle")}</p>
@@ -32,7 +32,7 @@ export default async function ContactPage() {
             <h2 className="text-xl font-bold mb-4">{t("info")}</h2>
             <div className="space-y-5">
               {[{ icon: "📧", label: "Email", value: SITE_CONFIG.email, link: `mailto:${SITE_CONFIG.email}` },{ icon: "📱", label: t("whatsapp"), value: SITE_CONFIG.whatsapp, link: `https://wa.me/${(SITE_CONFIG.whatsapp || '').replace(/[^0-9]/g, '')}` },{ icon: "💬", label: t("wechat"), value: SITE_CONFIG.wechat },{ icon: "📍", label: t("address"), value: SITE_CONFIG.address }].map((item) => (
-                <div key={item.label} className="flex items-start gap-4 p-4 bg-surface rounded-xl border border-border">
+                <div key={item.label} className="flex items-start gap-4 p-4 bg-space-card rounded-xl border border-border">
                   <span className="text-2xl shrink-0">{item.icon}</span>
                   <div><p className="text-xs text-muted mb-0.5">{item.label}</p>
                     {item.link ? <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground hover:text-primary transition-colors">{item.value}</a> : <p className="font-medium text-foreground">{item.value}</p>}

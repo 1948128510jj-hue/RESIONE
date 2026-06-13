@@ -114,8 +114,8 @@ export default function SelectorPage() {
   const currentQ = QUESTIONS[step];
 
   return (
-    <div className="bg-white min-h-screen">
-      <section className="bg-surface border-b border-border">
+    <div className=" min-h-screen">
+      <section className="bg-space-card border-b border-border">
         <div className="container-wide py-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t("title")}</h1>
           <p className="text-muted max-w-xl">
@@ -177,7 +177,7 @@ export default function SelectorPage() {
                         <p className="text-sm text-muted mt-0.5">{product.tagline}</p>
                         <div className="flex flex-wrap gap-1.5 mt-2">
                           <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full">{product.category}</span>
-                          {product.specs.color && <span className="px-2 py-0.5 bg-surface text-muted text-xs rounded-full">{product.specs.color}</span>}
+                          {product.specs.color && <span className="px-2 py-0.5 bg-space-card text-muted text-xs rounded-full">{product.specs.color}</span>}
                         </div>
                       </div>
                       <span className="text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity shrink-0">View →</span>

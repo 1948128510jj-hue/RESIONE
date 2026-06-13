@@ -18,7 +18,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
   if (!product) notFound();
 
   return (
-    <div className="bg-white">
+    <div className="">
       <div className="container-wide py-8 sm:py-12">
         <nav className="flex items-center gap-2 text-sm text-muted mb-6">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>
@@ -30,7 +30,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Poster-style product image (half-page catalog crop) */}
-          <div className="aspect-[3/4] bg-surface rounded-2xl flex items-center justify-center overflow-hidden border border-border">
+          <div className="aspect-[3/4] bg-space-card rounded-2xl flex items-center justify-center overflow-hidden border border-border">
             {!imgError ? (
               <img
                 src={`/images/products/${product.slug}.png`}
@@ -84,7 +84,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
               <h2 className="text-xl font-bold mb-3">{t("applications")}</h2>
               <div className="flex flex-wrap gap-2">
                 {product.applications.map((a, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-surface border border-border rounded-full text-xs text-muted">{td(`${slug}.apps.${i}`)}</span>
+                  <span key={i} className="px-3 py-1.5 bg-space-card border border-border rounded-full text-xs text-muted">{td(`${slug}.apps.${i}`)}</span>
                 ))}
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           </div>
 
           <div className="space-y-6">
-            <div className="bg-surface border border-border rounded-xl p-5">
+            <div className="bg-space-card border border-border rounded-xl p-5">
               <h3 className="font-semibold mb-3">{t("orderInfo")}</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
@@ -115,7 +115,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
               <Link href="/inquiry" className="block text-center mt-4 px-4 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-colors text-sm">{t("requestQuote")}</Link>
             </div>
 
-            <div className="bg-surface border border-border rounded-xl p-5">
+            <div className="bg-space-card border border-border rounded-xl p-5">
               <h3 className="font-semibold mb-3">{t("techDocs")}</h3>
               <div className="space-y-2">
                 <a href="#" className="flex items-center gap-2 text-sm text-primary hover:underline"><span>📄</span> {t("sds")}</a>

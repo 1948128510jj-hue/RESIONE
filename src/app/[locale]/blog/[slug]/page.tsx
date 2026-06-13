@@ -101,7 +101,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   if (!post) notFound();
 
   return (
-    <div className="bg-white">
+    <div className="">
       <article className="container-wide py-12 max-w-3xl mx-auto">
         <div className="mb-8">
           <div className="flex items-center gap-3 mb-3">

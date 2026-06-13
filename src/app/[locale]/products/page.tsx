@@ -23,8 +23,8 @@ function ProductGrid() {
   }
 
   return (
-    <div className="bg-white">
-      <section className="bg-surface border-b border-border">
+    <div className="">
+      <section className="bg-space-card border-b border-border">
         <div className="container-wide py-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t("title")}</h1>
           <p className="text-muted max-w-2xl">{t("subtitle")}</p>

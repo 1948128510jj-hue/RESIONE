@@ -11,8 +11,8 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
   const t = await getTranslations("inquiry");
   return (
-    <div className="bg-white">
-      <section className="bg-surface border-b border-border">
+    <div className="">
+      <section className="bg-space-card border-b border-border">
         <div className="container-wide py-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-3">{t("title")}</h1>
           <p className="text-muted max-w-2xl">{t("heroSub")}</p>
@@ -35,7 +35,7 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
                 <div><label className="block text-sm font-medium text-foreground mb-1.5">{t("phone")}</label><input type="tel" name="phone" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20" /></div>
               </div>
               <div><label className="block text-sm font-medium text-foreground mb-1.5">{t("resinType")}</label>
-                <select name="resin_type" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm bg-white">
+                <select name="resin_type" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm ">
                   <option value="">{t("selectResin")}</option>
                   <option value="standard">Standard Resin</option>
                   <option value="tough">Tough / ABS-Like Resin</option>
@@ -50,7 +50,7 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div><label className="block text-sm font-medium text-foreground mb-1.5">{t("quantity")}</label>
-                  <select name="quantity" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm bg-white">
+                  <select name="quantity" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm ">
                     <option value="">{t("selectQuantity")}</option>
                     <option value="sample">Samples (1-2 kg)</option>
                     <option value="small">Small batch (10-50 kg)</option>
@@ -60,7 +60,7 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
                   </select>
                 </div>
                 <div><label className="block text-sm font-medium text-foreground mb-1.5">{t("priceRange")}</label>
-                  <select name="price_range" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm bg-white">
+                  <select name="price_range" className="w-full border border-border rounded-lg px-4 py-2.5 text-sm ">
                     <option value="">{t("selectRange")}</option>
                     <option value="economy">$10-20/kg (Economy)</option>
                     <option value="mid">$20-40/kg (Mid-range)</option>
@@ -77,7 +77,7 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
             </form>
           </div>
           <div className="space-y-6">
-            <div className="bg-surface border border-border rounded-xl p-6">
+            <div className="bg-space-card border border-border rounded-xl p-6">
               <h3 className="font-semibold mb-4">{t("preferDirect")}</h3>
               <div className="space-y-3 text-sm">
                 {[{icon:"📧",label:"Email",val:SITE_CONFIG.email},{icon:"📱",label:"WhatsApp",val:SITE_CONFIG.whatsapp},{icon:"💬",label:"WeChat",val:SITE_CONFIG.wechat}].map((i)=>(
