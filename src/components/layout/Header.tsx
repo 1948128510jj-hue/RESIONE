@@ -13,14 +13,13 @@ export default function Header() {
   const locale = useLocale();
 
   const switchLang = useCallback((target: string) => {
-    // Use browser-native URL to reliably switch language
-    // window.location.pathname = /en/products or /zh or /
-    const raw = window.location.pathname;
-    // Replace leading locale segment or prepend if absent
-    const newPath = raw.match(/^\/(en|zh|ja)(\/|$)/)
-      ? raw.replace(/^\/(en|zh|ja)(\/|$)/, `/${target}$2`)
-      : `/${target}${raw === '/' ? '' : raw}`;
-    window.location.href = newPath + window.location.search + window.location.hash;
+    const segs = window.location.pathname.split('/').filter(Boolean);
+    if (segs.length > 0 && ['en','zh','ja'].includes(segs[0])) {
+      segs[0] = target;
+    } else {
+      segs.unshift(target);
+    }
+    window.location.href = '/' + segs.join('/') + window.location.search;
   }, []);
 
   return (
