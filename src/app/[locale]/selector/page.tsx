@@ -143,7 +143,7 @@ export default function SelectorPage() {
                   onClick={() => handleAnswer(opt.value)}
                   className="w-full text-left p-4 rounded-xl border border-border hover:border-primary hover:bg-primary/5 transition-all text-foreground font-medium"
                 >
-                  {opt.label}
+{t(`q${step+1}_opts.${currentQ.options.findIndex((o: any) => o.value === opt.value)}`)}
                 </button>
               ))}
             </div>
