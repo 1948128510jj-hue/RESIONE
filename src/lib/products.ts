@@ -42,12 +42,10 @@ export interface ProductCategory {
 }
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
-  { key: 'standard', name: 'Standard Resin', description: 'High-precision standard resins for general-purpose 3D printing', icon: '🔧' },
+  { key: 'standard', name: 'Standard', description: 'High-precision standard resins for general-purpose printing', icon: '🔧' },
   { key: 'tough', name: 'Tough / ABS-Like', description: 'Engineering-grade tough resins with excellent impact resistance', icon: '🛡️' },
-  { key: 'flexible', name: 'Flexible / Elastic', description: 'Rubber-like flexible resins for soft-touch applications', icon: '🔗' },
+  { key: 'flexible', name: 'Flexible / Elastic', description: 'Rubber-like flexible and elastic resins for soft-touch applications', icon: '🔗' },
   { key: 'high-temp', name: 'High Temperature', description: 'Heat-resistant resins for demanding thermal environments', icon: '🔥' },
-  { key: 'dental', name: 'Dental & Medical', description: 'Biocompatible resins for dental models and surgical guides', icon: '🦷' },
-  { key: 'casting', name: 'Casting / Jewelry', description: 'Clean burnout resins for precision investment casting', icon: '💎' },
-  { key: 'water-washable', name: 'Water Washable', description: 'Easy-to-clean resins, no IPA required', icon: '💧' },
-  { key: 'specialty', name: 'Specialty Resins', description: 'Specialized formulations for unique applications', icon: '⭐' },
+  { key: 'dental', name: 'Dental', description: 'Dental model, gingiva, and castable resins for dental professionals', icon: '🦷' },
+  { key: 'water-washable', name: 'Water Washable', description: 'Easy-to-clean resins — rinse with water, no IPA required', icon: '💧' },
 ];

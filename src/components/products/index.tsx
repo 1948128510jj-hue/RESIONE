@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useState } from "react";
 
 interface SpecItemProps {
   label: string;
@@ -22,16 +25,21 @@ interface SpecTableProps {
 export function SpecificationTable({ specs }: SpecTableProps) {
   const labels: Record<string, string> = {
     color: "Color",
-    viscosity: "Viscosity (cP @25°C)",
-    density: "Density (g/cm³)",
-    tensileStrength: "Tensile Strength (MPa)",
-    elongationAtBreak: "Elongation at Break (%)",
-    flexuralStrength: "Flexural Strength (MPa)",
-    flexuralModulus: "Flexural Modulus (MPa)",
-    hardness: "Hardness (Shore D)",
+    viscosity: "Viscosity",
+    liquidDensity: "Liquid Density",
+    solidDensity: "Solid Density",
+    density: "Density",
+    tensileStrength: "Tensile Strength",
+    tensileModulus: "Tensile Modulus",
+    elongationAtBreak: "Elongation at Break",
+    flexuralStrength: "Flexural Strength",
+    flexuralModulus: "Flexural Modulus",
+    hardness: "Hardness",
+    izodImpact: "Notched IZOD Impact",
+    waterAbsorption: "Water Absorption (24hr)",
     hdt: "HDT (°C)",
     wavelength: "Wavelength",
-    shrinkage: "Shrinkage (%)",
+    shrinkage: "Shrinkage",
   };
 
   return (
@@ -63,9 +71,20 @@ export function ProductCard({ slug, name, tagline, category }: ProductCardProps)
       href={`/products/${slug}`}
       className="group block bg-white border border-border rounded-xl overflow-hidden hover:border-primary hover:shadow-lg transition-all"
     >
-      {/* Product image placeholder */}
+      {/* Product poster image */}
       <div className="aspect-square bg-gradient-to-br from-surface to-gray-200 flex items-center justify-center relative overflow-hidden">
-        <div className="text-6xl opacity-30 group-hover:opacity-50 transition-opacity">🧪</div>
+        <img
+          src={`/images/products/${slug}_1.jpeg`}
+          alt={name}
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+          onError={(e) => {
+            (e.target as HTMLImageElement).style.display = 'none';
+            (e.target as HTMLImageElement).parentElement!.classList.add('fallback');
+          }}
+        />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 fallback-only">
+          <div className="text-6xl opacity-30">🧪</div>
+        </div>
         <div className="absolute top-3 left-3">
           <span className="px-2 py-0.5 bg-primary/10 text-primary text-xs font-medium rounded-full">{category}</span>
         </div>

@@ -1,16 +1,16 @@
 export const SITE_CONFIG = {
-  name: 'ShenShuo Tech',
-  fullName: 'ShenShuo Technology Co., Ltd.',
-  tagline: 'Professional LCD UV-Curing Resin Manufacturer',
-  description: 'Premium 3D printing photopolymer resins for LCD/DLP/SLA printers. OEM & ODM services available. Global B2B supplier.',
-  url: 'https://shenshuo3d.com',
-  email: 'info@shenshuo3d.com',
-  phone: '+86-xxx-xxxx-xxxx',
-  whatsapp: '+86-xxx-xxxx-xxxx',
-  wechat: 'ShenShuo3D',
-  address: 'Shenzhen, Guangdong, China',
+  name: 'RESIONE',
+  fullName: 'Dongguan Godsaid Technology Co., Ltd.',
+  tagline: 'RESIONE Makes 3D Printing More Practical',
+  description: 'Premium 3D printing photopolymer resins for LCD/DLP/SLA printers. RESIONE brand by Dongguan Godsaid Technology Co., Ltd. OEM & ODM services available.',
+  url: 'https://www.resione.com',
+  email: '1948128510@qq.com',
+  phone: '+86 18027908296',
+  whatsapp: '+86 18027908296',
+  wechat: '18027908296',
+  address: 'Room 106, Building 2, No. 33, Pingshan Industrial Road, Tangxia Town, Dongguan, Guangdong, China',
   social: {
-    facebook: '#',
+    facebook: 'https://facebook.com/Godsaid3d',
     linkedin: '#',
     youtube: '#',
     twitter: '#',
@@ -18,6 +18,7 @@ export const SITE_CONFIG = {
   nav: [
     { label: 'Home', href: '/' },
     { label: 'Products', href: '/products' },
+    { label: 'Resin Selector', href: '/selector' },
     { label: 'Services', href: '/services' },
     { label: 'About Us', href: '/about' },
     { label: 'Resources', href: '/resources' },
@@ -28,17 +29,17 @@ export const SITE_CONFIG = {
 export const WHY_CHOOSE_US = [
   {
     title: 'Professional R&D Team',
-    description: 'Dedicated in-house R&D team with years of resin formulation expertise, continuously innovating to meet market demands.',
+    description: 'Established in 2016, RESIONE focuses on R&D of photocuring 3D printing materials, developing resins that are truly practical for real-world applications.',
     icon: '🔬',
   },
   {
     title: 'Strict Quality Control',
-    description: 'ISO 9001 certified production process. Every batch undergoes rigorous testing for consistency and performance.',
+    description: 'All data measured in-house with ASTM standards in controlled 50-60% humidity, 25°C environment. Every batch tested for consistency.',
     icon: '✅',
   },
   {
     title: 'Global Shipping',
-    description: 'Reliable logistics network covering 50+ countries. Fast and secure delivery to your doorstep.',
+    description: 'Reliable logistics network covering international markets. Fast and secure delivery worldwide.',
     icon: '🚢',
   },
   {
@@ -47,14 +48,14 @@ export const WHY_CHOOSE_US = [
     icon: '🏭',
   },
   {
-    title: 'Technical Support',
-    description: 'Comprehensive technical documentation, print parameter guides, and responsive after-sales support team.',
+    title: 'Comprehensive Product Line',
+    description: 'From standard to high-temp, flexible to dental — 30+ resin formulations covering every 3D printing application.',
     icon: '📚',
   },
   {
-    title: 'Competitive Pricing',
-    description: 'Factory-direct pricing with flexible MOQ. Best value without compromising on quality.',
-    icon: '💰',
+    title: 'Application-Focused',
+    description: 'Our mission: "To make 3D printing more practical." Every resin is developed with real end-use applications in mind.',
+    icon: '🎯',
   },
 ];
 
