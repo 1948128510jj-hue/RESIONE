@@ -87,9 +87,9 @@ export const ALL_PRODUCTS: ProductData[] = [
     bottleSize: '500ml, 1kg, 5kg', minOrder: '10 kg', leadTime: '3-7 days',
   },
   {
-    slug: 'th-ww', name: 'TH-WW', tagline: 'Tough Water-Washable Resin — crack-resistant, fine detail',
+    slug: 'th-ww', name: 'TH-WW', tagline: 'Tough Water-Washable Resin — crack-resistant, fine detail, 2 colors',
     category: 'Water Washable', order: 6, isFeatured: false,
-    description: 'TH-WW is a water-washable resin with excellent toughness. Features crack resistance, low deformation, wear resistance, and fine detail. Very suitable for making detailed miniatures and transparent anime special-effect parts. Non-transparent colors are wear-resistant; all colors are yellowing-resistant with low odor.',
+    description: 'TH-WW is a water-washable resin with excellent toughness. Features crack resistance, low deformation, wear resistance, and fine detail. Perfect for tabletop miniatures and static scale models that need durability. Available in Gray and Flaming Orange — all colors are yellowing-resistant with low odor.',
     images: [],
     features: ['Water washable', 'Excellent flexibility', 'No greasy whitening', 'Long-term crack resistance', 'Low deformation', 'Fine details', 'Wear resistant (non-transparent)', 'Yellowing resistant', 'Low odor'],
     applications: ['Tabletop miniatures', 'Static scale models'],
