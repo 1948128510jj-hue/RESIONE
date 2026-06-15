@@ -1,18 +1,54 @@
 /**
- * HTTP Basic Authentication for Next.js middleware.
+ * HTTP Basic Authentication for Next.js middleware (Edge Runtime).
  *
  * Set env vars AUTH_USERNAME / AUTH_PASSWORD in Vercel dashboard.
- * Defaults below are placeholders — CHANGE THEM before going live.
+ * Hardcoded defaults are used if env vars are not set.
  */
 
 const AUTH_USERNAME = process.env.AUTH_USERNAME || 'Jenson';
 const AUTH_PASSWORD = process.env.AUTH_PASSWORD || 'huangjian66..';
 
+function base64Decode(str: string): string {
+  // Edge-compatible base64 decode (avoids atob which may not exist in some runtimes)
+  try {
+    return atob(str);
+  } catch {
+    // Fallback: manual decode
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+    let output = '';
+    let i = 0;
+    str = str.replace(/[^A-Za-z0-9+/=]/g, '');
+    while (i < str.length) {
+      const idx1 = chars.indexOf(str.charAt(i++));
+      const idx2 = chars.indexOf(str.charAt(i++));
+      const idx3 = chars.indexOf(str.charAt(i++));
+      const idx4 = chars.indexOf(str.charAt(i++));
+      const a = (idx1 << 2) | (idx2 >> 4);
+      const b = ((idx2 & 15) << 4) | (idx3 >> 2);
+      const c = ((idx3 & 3) << 6) | idx4;
+      output += String.fromCharCode(a);
+      if (idx3 !== 64) output += String.fromCharCode(b);
+      if (idx4 !== 64) output += String.fromCharCode(c);
+    }
+    return output;
+  }
+}
+
 export function isAuthenticated(request: Request): boolean {
   const authHeader = request.headers.get('authorization');
-  if (!authHeader || !authHeader.startsWith('Basic ')) return false;
-  const [user, pass] = atob(authHeader.slice(6)).split(':');
-  return user === AUTH_USERNAME && pass === AUTH_PASSWORD;
+  if (!authHeader) return false;
+  if (!authHeader.startsWith('Basic ')) return false;
+  try {
+    const base64 = authHeader.slice(6);
+    const decoded = base64Decode(base64);
+    const colonIdx = decoded.indexOf(':');
+    if (colonIdx === -1) return false;
+    const username = decoded.substring(0, colonIdx);
+    const password = decoded.substring(colonIdx + 1);
+    return username === AUTH_USERNAME && password === AUTH_PASSWORD;
+  } catch {
+    return false;
+  }
 }
 
 export function unauthorizedResponse(): Response {
