@@ -1,0 +1,59 @@
+- [Language Preference](language-preference.md) — User writes in English, Claude replies in Chinese unless explicitly told otherwise
+- [English Input Chinese Output](english-input-chinese-output.md) — Reinforces: user types English, always reply in Chinese
+- [Use Tencent Eyes](use-tencent-eyes.md) — Always use tencent-eyes skill first for image scanning, fallback to deepseek-eyes only when quota exhausted
+- [User Cognitive Delegation](user-cognitive-delegation.md) — User delegates decision authority; follow professional standards, don't pander to incorrect requests
+- [Pre-Task Clarification](pre-task-clarification.md) — Ask clarifying questions before acting, self-check logic and iterate
+- [User Sales Freshman](user-sales-freshman.md) — Freshman international sales engineer, needs ready-to-use materials + explanations
+- [User Work Style](user-work-style.md) — User prefers direct action — don't explain or ask permission, just do it
+- [Sales Engineer Playbook](resione-sales-engineer-playbook.md) — Three-line B2B matrix: dental, color, high-precision red wax
+- [RESIONE Product Database](resione-product-database.md) — 34-35款3D打印树脂（技术参数+价格+官方选型评分），多源交叉验证
+- [Skill Routing Rules](skill-routing-rules.md) — When to proactively suggest skills — trigger phrases and matching
+- [Skill Triggers](skill-triggers.md) — 用户常用话术→Skill/工具映射
+- [User File Output Preference](user-file-output-preference.md) — Save PDF/DOCX to Desktop, never use .md format
+- [User Contact Defaults](user-contact-defaults.md) — jenson@godsaid3d.com / RESIONE / 东莞市神说科技有限公司
+- [RESIONE Contact Info](resione-contact-info.md) — Jenson, jenson@godsaid3d.com, +86 13798847261
+- [RESIONE Gum Resin Seasonal Guide](resione-gum-resin-seasonal-guide.md) — F80 for summer, GM01 for winter
+- [Outreach Email Template](outreach-email-template.md) — Jenson-approved cold email: 106 words, peer-to-peer, no pitch
+- [Outreach Pain Point Module](outreach-pain-point-module.md) — 7-question framework to analyze any prospect before writing outreach
+- [Foreign Trade Outreach Framework](foreign-trade-outreach-framework.md) — Complete B2B system: email structures, 7-3-7 follow-up, regional styles, multi-channel
+- [Cost-Saving Research Module](cost-saving-research-module.md) — Manual 4-step background check: 0.12 RMB vs 5.70 RMB workflow, 6-section bilingual template
+- [Daily Summary Routine](daily-summary-routine.md) — Daily text report to boss: print work + learning summary
+- [RESIONE B2B Trade Data](resione-b2b-trade-data.md) — RESIONE B2B贸易数据
+- [LinkedIn Text Output Format](linkedin-text-output-format.md) — LinkedIn开发信输出格式
+- [Regional Outreach Tone](regional-outreach-tone.md) — 区域开发信语气风格指南
+- [Resin Quiz Errors](resin-quiz-errors.md) — 树脂考题错题记录
+- [Foreign Trade Job Search](user-foreign-trade.md) — User is seeking 外贸 jobs, prioritizing English skill improvement, wakes at 9:15 AM
+- [Network & Contacts](user-network.md) — Industry/family contacts: 蒋仁义 (姐夫) at 东科半导体, marketing dept
+- [Document TOC Rule](feedback-document-toc.md) — PDF超过4页必须先生成目录，用户偏好长文档有目录导航
+- [PDF Format Standard](pdf-format-standard.md) — A5+暖棕配色+表格规范，以RESIONE_W1.pdf为模板，零蓝色
+- [Vocab Quiz Preference](vocab-quiz-preference.md) — Claude说英文→用户答中文，简单直接，不搞花活
+- [Vision Model Preference](vision-model-preference.md) — 图片识别默认腾讯混元 youtu-vita，阿里百炼 qwen3-vl-plus 备用
+- [Session Summary Standard](session-summary-standard.md) — 每次会话结束生成 findings.md + progress.md + 桌面PDF
+- [Ask Before Acting](ask-before-acting.md) — Complex tasks: ask first. Simple tasks: just do it. Resolves with user-work-style
+- [Memory Conflict Check](memory-conflict-check.md) — Before saving new memory, cross-check for contradictions with existing ones
+- [IELTS Vocabulary Study](ielts-vocabulary-study.md) — 雅思核心词汇每日背诵，50词/天分5轮，词根记忆法，英文→中文
+- [Daily Learning Log](daily-learning-log.md) — 每天17:30-17:45写打印/学习/开发信/拍摄的每日复盘
+- [Market Diary Tracking](market-diary-tracking.md) — A股+美股每日复盘日记，12维度观察框架
+- [M1-PPI Macro Framework](macro-framework-m1-ppi.md) — 用户核心宏观择时框架：M1同比-PPI同比=剩余流动性，四象限仓位管理
+- [News→Investment Framework](news-investment-framework.md) — 新闻联播/政策文件→投资线索映射：六张网、两新两重、AI+能源
+- [Product Analysis Workflow](product-analysis-workflow.md) — RESIONE产品分析标准流程：先EYE扫产品册，再对比数据
+- [Resin Selection Cheatsheet](resin-selection-cheatsheet.md) — RESIONE树脂选型速查，按应用场景快速定位
+- [RESIONE Resin Knowledge Progress](resin-knowledge-progress.md) — 3D打印树脂技术+销售知识学习进度
+- [Mechanical Properties](mechanical-properties.md) — 3D打印材料力学性能关键认知：拉伸强度、弯曲模量、冲击韧性
+- [Printing Characteristics](printing-characteristics.md) — 各类3D打印材料打印特性：温度、附着力、翘曲、湿度敏感性
+- [Support Parameter Guide](support-parameter-guide.md) — 各树脂类型对应CHITUBOX支撑参数速查表
+- [3D Printing Lessons](3d-printing-lessons.md) — 3D打印实操教训与经验积累
+- [Social Media Registration Guide](social-media-registration-guide.md) — 老板的Ins/Facebook养号秘诀：注册流程+养号规范
+- [Turkiye Market Opportunity](turkey-market-opportunity.md) — 土耳其市场线索：已有用户和代理意向，卡在物流海关
+- [CRM Setup Other PC](crm-setup-other-pc.md) — 另一台电脑CRM部署，已装Python+Claude，一句话启动
+- [RESIONE Website Lessons](resione-website-lessons.md) — resione.top B2B网站开发铁律，不要再踩坑
+- [Resin3D B2B Website](resin3d-b2b-website.md) — 神说科技3D打印LCD树脂B2B独立站项目状态和下一步
+- [Claude Code Skills Ecosystem](claude-code-skills-ecosystem.md) — Superpowers、安装命令、token成本、推荐组合
+- [Windows Claude Env Fix](windows-claude-env-fix.md) — Claude Code在Windows上需要Git bash的非默认路径修复
+- [Windows Shortcut Icon](windows-shortcut-icon.md) — Windows快捷方式图标创建必须用COM Dispatch而非VBScript
+- [GitHub Token](github-token.md) — User's GitHub Personal Access Token (classic) for repo operations
+- [WangYu Sales Methodology](wangyu-sales-methodology.md) — 王雩赢销截拳道完整技法：魂道术器、三不急、3P法则、五类客户话术
+- [WangYu As Default](wangyu-as-default.md) — 所有销售场景默认使用王雩框架分析：拆解技法+给话术+写理由
+- [Don't Follow Blindly](dont-follow-blindly.md) — 用户是销售新人，不要盲从，基于专业判断给真实建议，必要时反驳
+- [India Dental Resin Market](india-dental-resin-market.md) — 印度牙科3D打印树脂市场全貌：竞品、价格、渠道、D01S进入策略
+- [Pending Followups 2026-07-08](pending-followups-2026-07-08.md) — Harsh (Protomont) + Macee (Modern Dental) D01S热线索跟进
