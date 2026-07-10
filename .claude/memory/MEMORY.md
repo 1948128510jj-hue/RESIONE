@@ -1,0 +1,39 @@
+- [Foreign Trade Job Search](user-foreign-trade.md) — User is seeking 外贸 jobs, prioritizing English skill improvement, wakes at 9:15 AM
+- [Network & Contacts](user-network.md) — Industry/family contacts: 蒋仁义 (姐夫) at 东科半导体, marketing dept
+- [User Work Style](user-work-style.md) — User prefers direct action — don't explain or ask permission, just do it
+- [Cognitive Delegation](user-cognitive-delegation.md) — User delegates decision authority; follow professional standards, don't pander to incorrect requests
+- [File Output Preference](user-file-output-preference.md) — Save text/output to D drive, not Desktop; never .md for non-technical files
+- [User Contact Defaults](user-contact-defaults.md) — jenson@godsaid3d.com / RESIONE / 东莞市神说科技有限公司
+- [Document TOC Rule](feedback-document-toc.md) — PDF超过4页必须先生成目录，用户偏好长文档有目录导航
+- [PDF Format Standard](pdf-format-standard.md) — A5+暖棕配色+表格规范，以RESIONE_W1.pdf为模板，零蓝色
+- [Vocab Quiz Preference](vocab-quiz-preference.md) — Claude说英文→用户答中文，简单直接，不搞花活
+- [Vision Model Preference](vision-model-preference.md) — 图片识别默认腾讯混元 youtu-vita，阿里百炼 qwen3-vl-plus 备用
+- [Session Summary Standard](session-summary-standard.md) — 每次会话结束生成 findings.md + progress.md + 桌面PDF
+- [Ask Before Acting](ask-before-acting.md) — Complex tasks: ask first. Simple tasks: just do it. Resolves with user-work-style
+- [Memory Conflict Check](memory-conflict-check.md) — Before saving new memory, cross-check for contradictions with existing ones
+- [Skill Routing Rules](skill-routing-rules.md) — When to proactively suggest skills — trigger phrases and matching
+- [Skill Triggers](skill-triggers.md) — 用户常用话术→Skill/工具映射
+- ~~[IELTS Vocabulary Study](ielts-vocabulary-study.md)~~ — ⛔ 已停用 (2026-06-27)，进度 10/3269
+- [Daily Learning Log](daily-learning-log.md) — 每天17:30-17:45写打印/学习/开发信/拍摄的每日复盘
+- [Market Diary Tracking](market-diary-tracking.md) — A股+美股每日复盘日记，12维度观察框架
+- [M1-PPI Macro Framework](macro-framework-m1-ppi.md) — 用户核心宏观择时框架：M1同比-PPI同比=剩余流动性，四象限仓位管理
+- [News→Investment Framework](news-investment-framework.md) — 新闻联播/政策文件→投资线索映射：六张网、两新两重、AI+能源
+- [3D Printing Industry Ecosystem](3d-printing-industry-ecosystem.md) — 设备厂商/材料经销商/打印服务商/终端用户四大群体+获客路径
+- [LCD Printer Global Database](lcd-printer-database.md) — 全球LCD/DLP光固化3D打印机数据库，消费级到工业级，含价格/参数/测评/选型
+- [RESIONE Product Database](resione-product-database.md) — 34款3D打印树脂（技术参数+价格+官方选型评分），多源交叉验证
+- [Product Analysis Workflow](product-analysis-workflow.md) — RESIONE产品分析标准流程：先EYE扫产品册，再对比数据
+- [Resin Selection Cheatsheet](resin-selection-cheatsheet.md) — RESIONE树脂选型速查，按应用场景快速定位
+- [RESIONE Resin Knowledge Progress](resin-knowledge-progress.md) — 3D打印树脂技术+销售知识学习进度
+- [Mechanical Properties](mechanical-properties.md) — 3D打印材料力学性能关键认知：拉伸强度、弯曲模量、冲击韧性
+- [Printing Characteristics](printing-characteristics.md) — 各类3D打印材料打印特性：温度、附着力、翘曲、湿度敏感性
+- [Support Parameter Guide](support-parameter-guide.md) — 各树脂类型对应CHITUBOX支撑参数速查表
+- [3D Printing Lessons](3d-printing-lessons.md) — 3D打印实操教训与经验积累
+- [Social Media Registration Guide](social-media-registration-guide.md) — 老板的Ins/Facebook养号秘诀：注册流程+养号规范
+- [Turkiye Market Opportunity](turkey-market-opportunity.md) — 土耳其市场线索：已有用户和代理意向，卡在物流海关
+- [CRM Setup Other PC](crm-setup-other-pc.md) — 另一台电脑CRM部署，已装Python+Claude，一句话启动
+- [RESIONE Website Lessons](resione-website-lessons.md) — resione.top B2B网站开发铁律，不要再踩坑
+- [Resin3D B2B Website](resin3d-b2b-website.md) — 神说科技3D打印LCD树脂B2B独立站项目状态和下一步
+- [Claude Code Skills Ecosystem](claude-code-skills-ecosystem.md) — Superpowers、安装命令、token成本、推荐组合
+- [Windows Claude Env Fix](windows-claude-env-fix.md) — Claude Code在Windows上需要Git bash的非默认路径修复
+- [Windows Shortcut Icon](windows-shortcut-icon.md) — Windows快捷方式图标创建必须用COM Dispatch而非VBScript
+- [GitHub Token](github-token.md) — User's GitHub Personal Access Token (classic) for repo operations
