@@ -25,6 +25,7 @@
 - [Foreign Trade Job Search](user-foreign-trade.md) — User is seeking 外贸 jobs, prioritizing English skill improvement, wakes at 9:15 AM
 - [Network & Contacts](user-network.md) — Industry/family contacts: 蒋仁义 (姐夫) at 东科半导体, marketing dept
 - [Document TOC Rule](feedback-document-toc.md) — PDF超过4页必须先生成目录，用户偏好长文档有目录导航
+- [Resume Personal Advantage Format](resume-personal-advantage-format.md) — 简历个人优势用段落式，不加圆点横线
 - [PDF Format Standard](pdf-format-standard.md) — A5+暖棕配色+表格规范，以RESIONE_W1.pdf为模板，零蓝色
 - [Vocab Quiz Preference](vocab-quiz-preference.md) — Claude说英文→用户答中文，简单直接，不搞花活
 - [Vision Model Preference](vision-model-preference.md) — 图片识别默认腾讯混元 youtu-vita，阿里百炼 qwen3-vl-plus 备用
