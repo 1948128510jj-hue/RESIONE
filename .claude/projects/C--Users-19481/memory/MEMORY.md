@@ -56,5 +56,6 @@
 - [WangYu Sales Methodology](wangyu-sales-methodology.md) — 王雩赢销截拳道完整技法：魂道术器、三不急、3P法则、五类客户话术
 - [WangYu As Default](wangyu-as-default.md) — 所有销售场景默认使用王雩框架分析：拆解技法+给话术+写理由
 - [Don't Follow Blindly](dont-follow-blindly.md) — 用户是销售新人，不要盲从，基于专业判断给真实建议，必要时反驳
+- [Resume V7 Template](resume-v7-template.md) — 简历排版完整规范：深蓝商务配色、段标题左竖条、●圆点、照片右对齐、日期右对齐、求职意向浅蓝底
 - [India Dental Resin Market](india-dental-resin-market.md) — 印度牙科3D打印树脂市场全貌：竞品、价格、渠道、D01S进入策略
 - [Pending Followups 2026-07-08](pending-followups-2026-07-08.md) — Harsh (Protomont) + Macee (Modern Dental) D01S热线索跟进
