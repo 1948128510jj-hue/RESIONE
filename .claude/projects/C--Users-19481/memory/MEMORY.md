@@ -59,3 +59,5 @@
 - [Resume V7 Template](resume-v7-template.md) — 简历排版完整规范：深蓝商务配色、段标题左竖条、●圆点、照片右对齐、日期右对齐、求职意向浅蓝底
 - [India Dental Resin Market](india-dental-resin-market.md) — 印度牙科3D打印树脂市场全貌：竞品、价格、渠道、D01S进入策略
 - [Pending Followups 2026-07-08](pending-followups-2026-07-08.md) — Harsh (Protomont) + Macee (Modern Dental) D01S热线索跟进
+- [Work Improvements 2026-07-21](work-improvements-2026-07-21.md) — 7项工作改进建议：客户分层、邮件执行力、产品梯隊、跟进系统、行业匹配
+- [Middle East Dental Channel Targets](middle-east-dental-channel-targets.md) — 2026-07-21 中东+印度牙科3D打印渠道背调：6个待发目标+竞品+终端用户
