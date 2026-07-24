@@ -12,8 +12,19 @@ metadata:
 
 - **Name**: Jenson
 - **Email**: jenson@godsaid3d.com
-- **Phone**: 13798847261
-- **Company**: RESIONE Co., Ltd.
+- **Phone/WhatsApp**: +86 18027908296
+- **Company**: RESIONE — Dongguan Godsaid Technology Co., Ltd.
+- **Factory**: Room 106, Building 2, No. 33, Pingshan Industrial Road, Tangxia Town, Dongguan, Guangdong, China
 - **Role**: Business Development
 
-Related: [[resione-product-database]]
+### 统一签名（所有对外邮件/LinkedIn/WhatsApp）
+```
+Warm regards,
+Jenson
+RESIONE — Dongguan Godsaid Technology Co., Ltd.
+jenson@godsaid3d.com
++86 18027908296 (WhatsApp)
+Factory: Room 106, Building 2, No. 33, Pingshan Industrial Road, Tangxia Town, Dongguan, Guangdong, China
+```
+
+Related: [[email-signature-standard]] [[resione-product-database]]

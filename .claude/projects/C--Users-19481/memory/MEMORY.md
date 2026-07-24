@@ -12,6 +12,7 @@
 - [User File Output Preference](user-file-output-preference.md) — Save PDF/DOCX to Desktop, never use .md format
 - [User Contact Defaults](user-contact-defaults.md) — jenson@godsaid3d.com / RESIONE / 东莞市神说科技有限公司
 - [RESIONE Contact Info](resione-contact-info.md) — Jenson, jenson@godsaid3d.com, +86 13798847261
+- [Email Signature Standard](email-signature-standard.md) — 所有对外邮件统一签名：Warm regards + 工厂地址 + WhatsApp
 - [RESIONE Gum Resin Seasonal Guide](resione-gum-resin-seasonal-guide.md) — F80 for summer, GM01 for winter
 - [Outreach Email Template](outreach-email-template.md) — Jenson-approved cold email: 106 words, peer-to-peer, no pitch
 - [Outreach Pain Point Module](outreach-pain-point-module.md) — 7-question framework to analyze any prospect before writing outreach
@@ -21,6 +22,7 @@
 - [RESIONE B2B Trade Data](resione-b2b-trade-data.md) — RESIONE B2B贸易数据
 - [LinkedIn Text Output Format](linkedin-text-output-format.md) — LinkedIn开发信输出格式
 - [Regional Outreach Tone](regional-outreach-tone.md) — 区域开发信语气风格指南
+- [Distributor Outreach Skill](distributor-outreach-skill.md) — 经销商开发信Skill：四大输入参数+六大硬性策略+区域适配+双语输出
 - [Resin Quiz Errors](resin-quiz-errors.md) — 树脂考题错题记录
 - [Foreign Trade Job Search](user-foreign-trade.md) — User is seeking 外贸 jobs, prioritizing English skill improvement, wakes at 9:15 AM
 - [Network & Contacts](user-network.md) — Industry/family contacts: 蒋仁义 (姐夫) at 东科半导体, marketing dept

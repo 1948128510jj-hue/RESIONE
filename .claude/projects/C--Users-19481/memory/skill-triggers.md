@@ -1,8 +1,10 @@
 ---
 name: skill-triggers
 description: 用户常用话术→Skill/工具映射，帮助主动识别并调用
-metadata:
+metadata: 
+  node_type: memory
   type: feedback
+  originSessionId: cf0972d5-25c0-4de9-aa25-9bba43868a98
 ---
 
 ## 话术 → Skill 映射表
@@ -21,6 +23,11 @@ metadata:
 |----------|----------|
 | "同步" / "推送" / "下班" | `bash ~/claude-config/push-sync.sh` |
 | "git pull" / "拉取" | `cd ~/claude-config && git pull` |
+
+### 开发信/外贸邮件
+| 用户话术 | 调用的 Skill |
+|----------|-------------|
+| "开发信" / "外贸邮件" / "经销商邮件" / "写邮件给" / "跟进邮件" | **distributor-outreach** |
 
 ### 图片/视觉
 | 用户话术 | 调用的 Skill |
