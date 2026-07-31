@@ -1,3 +1,5 @@
+- [Ideal Customer Profiles](ideal-customer-profiles.md) — RESIONE两类精准经销商画像：全品类经销商+牙科专营，含全球待开发名单
+- [Quote Template](quote-template.md) — 经销商报价单标准模板：结构/条款/定价/参数速查
 - [Language Preference](language-preference.md) — User writes in English, Claude replies in Chinese unless explicitly told otherwise
 - [English Input Chinese Output](english-input-chinese-output.md) — Reinforces: user types English, always reply in Chinese
 - [Use Tencent Eyes](use-tencent-eyes.md) — Always use tencent-eyes skill first for image scanning, fallback to deepseek-eyes only when quota exhausted
